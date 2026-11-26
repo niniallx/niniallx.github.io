@@ -335,6 +335,7 @@
         .page p.cs-card-label { font-family: 'Outfit', sans-serif; font-weight: 900; font-size: .8rem !important; letter-spacing: .15em; text-transform: uppercase; color: var(--c500) !important; margin-bottom: .6rem; }
         .cs-card p { font-size: 1rem !important; line-height: 1.65; }
         .page p.cs-demo { margin-top: 1rem; font-size: .85rem !important; color: #737373 !important; }
+        .cs-section .img-slot.cs-shot { border: 0; border-radius: 1.25rem; }
         /* Cartes développement */
         .dev-card {
             cursor: pointer;
@@ -505,17 +506,40 @@
                     </div>
                 </article>
 
-                <!-- PROJET 02 — interface Figma de la plateforme ACM (page modèle à compléter)
-                     Visuel : déposer assets/acm-ui-cover.png -->
-                <article class="group grid lg:grid-cols-12 gap-8 lg:gap-12 items-center cursor-pointer" onclick="showProject('acm-ui')">
+                <!-- PROJET 02 -->
+                <article class="group grid lg:grid-cols-12 gap-8 lg:gap-12 items-center cursor-pointer" onclick="showProject('gardeco')">
                     <div class="lg:col-span-7 lg:order-2">
-                        <figure class="img-slot case-cover aspect-[16/10] border-blue-200 bg-blue-50" data-label="Visuel projet — 1600×1000">
-                            <img src="assets/acm-ui-cover.png" alt="Interface de la plateforme Ike Oluwa" onload="slotLoaded(this)" onerror="slotMissing(this)">
+                        <figure class="img-slot case-cover aspect-[16/10] border-green-200 bg-green-50" data-label="Visuel projet — 1600×1000">
+                            <img src="assets/gardeco-mockup-m1.jpg" alt="Maquette de la plateforme Gard'Éco" onload="slotLoaded(this)" onerror="slotMissing(this)">
                         </figure>
                     </div>
                     <div class="lg:col-span-5 lg:order-1">
                         <div class="flex items-center gap-4 mb-5">
-                            <span class="case-number text-blue-300">02</span>
+                            <span class="case-number text-green-300">02</span>
+                            <span class="text-[10px] font-bold tracking-widest uppercase bg-green-100 text-green-800 px-2.5 py-1 rounded-full border border-green-200/60">Plateforme web</span>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-black tracking-tight mb-4 group-hover:text-green-700 transition-colors">Gard'Éco</h3>
+                        <p class="text-neutral-500 font-light leading-relaxed mb-6">Une plateforme de jardinage partagé : trouver un jardin près de chez soi, réserver une parcelle ou proposer son propre terrain.</p>
+                        <dl class="grid grid-cols-3 gap-4 py-5 border-y border-neutral-100 mb-6 text-sm">
+                            <div><dt class="text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-1">Support</dt><dd class="font-semibold">Web & mobile</dd></div>
+                            <div><dt class="text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-1">Outil</dt><dd class="font-semibold">Figma</dd></div>
+                            <div><dt class="text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-1">Livrables</dt><dd class="font-semibold">Maquettes, prototype</dd></div>
+                        </dl>
+                        <span class="inline-flex items-center gap-2 font-heading font-bold text-sm group-hover:gap-3 transition-all">Voir l'étude de cas <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </article>
+
+                <!-- PROJET 03 — interface Figma de la plateforme ACM (page modèle à compléter)
+                     Visuel : déposer assets/acm-ui-cover.png -->
+                <article class="group grid lg:grid-cols-12 gap-8 lg:gap-12 items-center cursor-pointer" onclick="showProject('acm-ui')">
+                    <div class="lg:col-span-7">
+                        <figure class="img-slot case-cover aspect-[16/10] border-blue-200 bg-blue-50" data-label="Visuel projet — 1600×1000">
+                            <img src="assets/acm-ui-cover.png" alt="Interface de la plateforme Ike Oluwa" onload="slotLoaded(this)" onerror="this.onerror=function(){slotMissing(this)};this.src='assets/acm-arborescence.png'">
+                        </figure>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <div class="flex items-center gap-4 mb-5">
+                            <span class="case-number text-blue-300">03</span>
                             <span class="text-[10px] font-bold tracking-widest uppercase bg-blue-100 text-blue-800 px-2.5 py-1 rounded-full border border-blue-200/60">Plateforme associative</span>
                         </div>
                         <h3 class="text-3xl md:text-4xl font-black tracking-tight mb-4 group-hover:text-blue-600 transition-colors">Ike Oluwa — ACM</h3>
@@ -529,16 +553,16 @@
                     </div>
                 </article>
 
-                <!-- PROJET 03 -->
+                <!-- PROJET 04 -->
                 <article class="group grid lg:grid-cols-12 gap-8 lg:gap-12 items-center cursor-pointer" onclick="showProject('noor')">
-                    <div class="lg:col-span-7">
+                    <div class="lg:col-span-7 lg:order-2">
                         <figure class="img-slot case-cover aspect-[16/10] border-pink-200 bg-pink-50" data-label="Visuel projet — 1600×1000">
                             <img src="assets/noor-dashboard.png" alt="Tableau de bord de l'application Noor" onload="slotLoaded(this)" onerror="slotMissing(this)">
                         </figure>
                     </div>
-                    <div class="lg:col-span-5">
+                    <div class="lg:col-span-5 lg:order-1">
                         <div class="flex items-center gap-4 mb-5">
-                            <span class="case-number text-pink-300">03</span>
+                            <span class="case-number text-pink-300">04</span>
                             <span class="text-[10px] font-bold tracking-widest uppercase bg-pink-100 text-pink-800 px-2.5 py-1 rounded-full border border-pink-200/60">Application mobile</span>
                         </div>
                         <h3 class="text-3xl md:text-4xl font-black tracking-tight mb-4 group-hover:text-pink-600 transition-colors">Noor</h3>
@@ -552,7 +576,7 @@
                     </div>
                 </article>
 
-                <!-- PROJET 04 — emplacement libre pour un prochain projet Figma, masqué tant qu'il n'est pas prêt.
+                <!-- PROJET 05 — emplacement libre pour un prochain projet Figma, masqué tant qu'il n'est pas prêt.
                      Pour l'activer : retirer les balises de commentaire autour du bloc <article>, remplacer l'image et les textes,
                      et ajouter onclick="showProject('id-de-la-page')" sur <article>.
                 <article class="group grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -999,7 +1023,7 @@
         <div class="max-w-6xl mx-auto px-6 pt-10 pb-24">
             <div class="flex flex-wrap gap-3 justify-between items-center mb-14">
                 <button onclick="showPage('home')" class="cs-btn"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button>
-                <div class="flex flex-wrap gap-3"><button onclick="showProject('acm-ui')" class="cs-btn cs-btn-dark">Projet suivant <i class="fa-solid fa-arrow-right"></i></button></div>
+                <div class="flex flex-wrap gap-3"><button onclick="showProject('gardeco')" class="cs-btn cs-btn-dark">Projet suivant <i class="fa-solid fa-arrow-right"></i></button></div>
             </div>
 
             <span class="cs-tag">Site associatif</span>
@@ -1024,6 +1048,43 @@
 <section id="planpoitrines-maquette-bilan" data-cs-section class="cs-section"><p class="cs-num">08</p><h2 class="cs-h2">Bilan</h2><div class="cs-grid-2"><div class="cs-card"><p class="cs-card-label">Difficulté</p><p>Designer sans charte graphique finalisée.</p></div><div class="cs-card"><p class="cs-card-label">Ce que j&#x27;en retiens</p><p>Valider étape par étape plutôt qu&#x27;attendre que tout soit figé.</p></div></div></section>
                 </div>
             </div>
+
+            <div class="flex justify-center pt-16">
+                <button onclick="showProject('gardeco')" class="cs-btn cs-btn-dark cs-btn-lg">Projet suivant : Gard&#x27;Éco <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-gardeco" class="page cs-page relative z-10" style="--c50:#f0fdf4;--c100:#dcfce7;--c200:#bbf7d0;--c500:#16a34a;--c700:#15803d;--c800:#166534">
+        <div class="max-w-6xl mx-auto px-6 pt-10 pb-24">
+            <div class="flex flex-wrap gap-3 justify-between items-center mb-14">
+                <button onclick="showPage('home')" class="cs-btn"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button>
+                <div class="flex flex-wrap gap-3"><button onclick="showProject('acm-ui')" class="cs-btn cs-btn-dark">Projet suivant <i class="fa-solid fa-arrow-right"></i></button></div>
+            </div>
+
+            <span class="cs-tag">Plateforme web</span>
+            <h1 class="cs-h1">Gard&#x27;Éco</h1>
+            <p class="cs-subtitle">Une plateforme pour trouver un jardin partagé près de chez soi et y réserver une parcelle.</p>
+            <figure class="img-slot opt zoomable aspect-[16/10] cs-cover cs-shot" data-label="Visuel de couverture" data-caption="Gard&#x27;Éco"><img src="assets/gardeco-mockup-m1.jpg" alt="Gard&#x27;Éco" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure>
+            <div class="cs-meta"><div><p class="cs-meta-k">Support</p><p class="cs-meta-v">Web &amp; mobile</p></div><div><p class="cs-meta-k">Outil</p><p class="cs-meta-v">Figma</p></div><div><p class="cs-meta-k">Livrables</p><p class="cs-meta-v">Maquettes, prototype</p></div><div><p class="cs-meta-k">Profils</p><p class="cs-meta-v">Visiteur, membre, admin</p></div></div>
+
+            <div class="flex flex-wrap gap-12 lg:gap-16 items-start">
+                <nav aria-label="Sommaire" class="cs-nav">
+                    <p class="cs-meta-k mb-4">Sommaire</p>
+                    <a href="#gardeco-contexte" data-cs-target="gardeco-contexte" onclick="csScroll(event, 'gardeco-contexte')"><span class="cs-nav-num">01</span> Contexte</a><a href="#gardeco-probleme" data-cs-target="gardeco-probleme" onclick="csScroll(event, 'gardeco-probleme')"><span class="cs-nav-num">02</span> Problème</a><a href="#gardeco-processus" data-cs-target="gardeco-processus" onclick="csScroll(event, 'gardeco-processus')"><span class="cs-nav-num">03</span> Processus</a><a href="#gardeco-wireframes" data-cs-target="gardeco-wireframes" onclick="csScroll(event, 'gardeco-wireframes')"><span class="cs-nav-num">04</span> Wireframes</a><a href="#gardeco-mockups" data-cs-target="gardeco-mockups" onclick="csScroll(event, 'gardeco-mockups')"><span class="cs-nav-num">06</span> Mockups</a><a href="#gardeco-prototype" data-cs-target="gardeco-prototype" onclick="csScroll(event, 'gardeco-prototype')"><span class="cs-nav-num">07</span> Prototype</a><a href="#gardeco-details" data-cs-target="gardeco-details" onclick="csScroll(event, 'gardeco-details')"><span class="cs-nav-num">08</span> Détails</a>
+                </nav>
+                <div class="cs-body">
+<section id="gardeco-contexte" data-cs-section class="cs-section"><p class="cs-num">01</p><h2 class="cs-h2">Contexte</h2><p class="cs-lead">Des jardins partagés existent près de chez soi, mais ils sont difficiles à trouver et à réserver. Gard&#x27;Éco réunit l&#x27;offre en un seul endroit.</p><div class="cs-chips"><span class="cs-chip">Co-jardinage</span><span class="cs-chip">Réservation de parcelles</span><span class="cs-chip">Espace administrateur</span></div></section>
+<section id="gardeco-probleme" data-cs-section class="cs-section cs-problem-box"><p class="cs-num-line"><span class="cs-num">02</span> · Problème</p><p class="cs-problem">Comment permettre à des jardiniers, novices ou confirmés, de trouver un jardin et d&#x27;y réserver une parcelle en quelques étapes ?</p></section>
+<section id="gardeco-processus" data-cs-section data-cs-media class="cs-section"><p class="cs-num">03</p><h2 class="cs-h2">Processus</h2><div class="cs-grid-2"><figure class="cs-fig"><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Trouver un jardin" data-caption="Trouver un jardin"><img src="assets/gardeco-liste.jpg" alt="Trouver un jardin" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figcaption class="cs-caption"><strong>Trouver un jardin</strong><span>Adresse, nombre de parcelles et surface, visibles d&#x27;un coup d&#x27;œil.</span></figcaption></figure><figure class="cs-fig"><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Partager un jardin" data-caption="Partager un jardin"><img src="assets/gardeco-partage.jpg" alt="Partager un jardin" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figcaption class="cs-caption"><strong>Partager un jardin</strong><span>Un formulaire court pour proposer son propre terrain.</span></figcaption></figure></div></section>
+<section id="gardeco-wireframes" data-cs-section data-cs-media class="cs-section"><p class="cs-num">04</p><h2 class="cs-h2">Wireframes</h2><p class="cs-lead">Chaque page, écran par écran.</p><div class="cs-grid-3"><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Wireframe 1" data-caption="Wireframe 1"><img src="assets/gardeco-wireframe-1.png" alt="Wireframe 1" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Wireframe 2" data-caption="Wireframe 2"><img src="assets/gardeco-wireframe-2.png" alt="Wireframe 2" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Wireframe mobile" data-caption="Wireframe mobile"><img src="assets/gardeco-wireframe-mobile.png" alt="Wireframe mobile" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></div></section>
+<section id="gardeco-mockups" data-cs-section data-cs-media class="cs-section"><p class="cs-num">06</p><h2 class="cs-h2">Mockups</h2><p class="cs-lead">Le parcours de réservation sur mobile : trouver un jardin, choisir ses parcelles, confirmer.</p><figure class="img-slot opt zoomable aspect-[16/10] cs-shot" data-label="Mockups mobiles" data-caption="Parcours de réservation sur mobile"><img src="assets/gardeco-mockup-m2.jpg" alt="Trois écrans mobiles de Gard'Éco : liste des jardins, réservation, confirmation" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></section>
+<section id="gardeco-prototype" data-cs-section class="cs-section"><p class="cs-num">07</p><h2 class="cs-h2">Prototype</h2><p class="cs-lead">Le prototype cliquable, de l'accueil à la confirmation de réservation.</p><a href="https://www.figma.com/proto/WfWHIDe4Rg7CFrm2daqzvi/Maquettes-et-Prototypes?node-id=2-5" target="_blank" class="cs-btn cs-btn-dark"><i class="fa-brands fa-figma"></i> Voir le prototype dans Figma</a></section>
+<section id="gardeco-details" data-cs-section data-cs-media class="cs-section"><p class="cs-num">08</p><h2 class="cs-h2">Détails</h2><p class="cs-lead">Zoom sur les choix d'interface.</p><div class="cs-grid-2"><figure class="cs-fig"><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Détail 1" data-caption="Détail 1"><img src="assets/gardeco-detail-1.png" alt="Détail 1" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></figure><figure class="cs-fig"><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Détail 2" data-caption="Détail 2"><img src="assets/gardeco-detail-2.png" alt="Détail 2" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></figure></div></section>
+                </div>
+            </div>
+
+            <!--DETAIL-->
 
             <div class="flex justify-center pt-16">
                 <button onclick="showProject('acm-ui')" class="cs-btn cs-btn-dark cs-btn-lg">Projet suivant : Ike Oluwa <i class="fa-solid fa-arrow-right"></i></button>
