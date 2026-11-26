@@ -25,7 +25,7 @@ Chaque étude de cas prévoit des emplacements facultatifs. Tant que l'image n'e
 | Détails | `<id>-detail-1.png`, `<id>-detail-2.png` |
 | Ike Oluwa (UX) uniquement | `acm-ui-cover.png`, `acm-ui-parcours-utilisateur.png`, `acm-ui-interface.png` |
 
-Identifiants : `planpoitrines-maquette`, `acm-ui`, `noor`, `rj10`.
+Identifiants : `planpoitrines-maquette`, `gardeco`, `acm-ui`, `noor`, `rj10`.
 
 Les projets de développement (Plan Poitrines vitrine, Ike Oluwa back-end, WR506D, WR602D) n'ont pas de page dédiée : ils sont présentés en cartes sur l'accueil.
 
