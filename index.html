@@ -58,6 +58,17 @@
             document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
         }
     </script>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://niniallx.github.io/">
+    <meta property="og:title" content="Nimotalah Alli — UX/UI Designer">
+    <meta property="og:description" content="Portfolio UX/UI : études de cas, arborescences, wireframes, maquettes et prototypes Figma.">
+    <meta property="og:image" content="https://niniallx.github.io/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
@@ -161,6 +172,12 @@
             object-position: top;
         }
         .img-slot.filled { border-style: solid; background-image: none; }
+        /* Monogramme affiché tant que la photo n'est pas ajoutée */
+        .img-slot.avatar { border-style: solid; border-color: #fbcfe8; background: linear-gradient(135deg, #fdf2f8, #fce7f3 60%, #fff1f2); }
+        .img-slot.avatar::before { content: attr(data-initials); font-family: 'Outfit', sans-serif; font-weight: 900; font-size: clamp(5rem, 12vw, 9rem); letter-spacing: -0.04em; text-transform: none; padding: 0; color: transparent; background: linear-gradient(135deg, #db2777, #fb7185); -webkit-background-clip: text; background-clip: text; }
+        .img-slot.avatar.filled { background: #fff; }
+        .img-slot.logo { border-style: solid; background-image: none; }
+        .img-slot.logo::before { content: attr(data-initials); font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 1.5rem; letter-spacing: 0; text-transform: none; padding: 0; color: currentColor; }
         .img-slot.filled::before { content: none; }
         .img-slot.zoomable.filled { cursor: zoom-in; }
         .case-cover > img { transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
@@ -420,7 +437,7 @@
 
             <div class="lg:col-span-5 relative max-w-md mx-auto w-full">
                 <div class="absolute -inset-4 bg-gradient-to-tr from-pink-200/70 via-rose-100/50 to-pink-300/60 rounded-[2.5rem] rotate-3"></div>
-                <figure class="img-slot aspect-[4/5] rounded-[2rem] border-neutral-300 bg-white relative" data-label="Photo de profil — 1200×1500">
+                <figure class="img-slot avatar aspect-[4/5] rounded-[2rem] relative" data-label="Photo de profil" data-initials="NA">
                     <img src="assets/photo-profil.jpg" alt="Portrait de Nimotalah Alli" onload="slotLoaded(this)" onerror="slotMissing(this)">
                 </figure>
 
@@ -535,8 +552,9 @@
                     </div>
                 </article>
 
-                <!-- PROJET 04 — emplacement libre pour un prochain projet Figma.
-                     Pour l'activer : remplacer l'image, les textes, et ajouter onclick="showProject('id-de-la-page')" sur <article>. -->
+                <!-- PROJET 04 — emplacement libre pour un prochain projet Figma, masqué tant qu'il n'est pas prêt.
+                     Pour l'activer : retirer les balises de commentaire autour du bloc <article>, remplacer l'image et les textes,
+                     et ajouter onclick="showProject('id-de-la-page')" sur <article>.
                 <article class="group grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                     <div class="lg:col-span-7 lg:order-2">
                         <figure class="img-slot case-cover aspect-[16/10] border-yellow-200 bg-yellow-50" data-label="Visuel projet — 1600×1000">
@@ -556,7 +574,9 @@
                             <div><dt class="text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-1">Outils</dt><dd class="font-semibold">—</dd></div>
                         </dl>
                     </div>
+                
                 </article>
+                -->
 
             </div>
         </section>
@@ -611,7 +631,7 @@
         <section id="about" class="max-w-6xl mx-auto px-6 py-24 mt-6 border-t border-neutral-100">
             <div class="grid lg:grid-cols-12 gap-12 items-start">
                 <div class="lg:col-span-5 lg:sticky lg:top-28">
-                    <figure class="img-slot aspect-[4/5] border-neutral-200 bg-neutral-50 mb-6" data-label="Photo — 1200×1500">
+                    <figure class="img-slot avatar aspect-[4/5] mb-6" data-label="Photo" data-initials="NA">
                         <img src="assets/photo-about.jpg" alt="Nimotalah Alli" onload="slotLoaded(this)" onerror="slotMissing(this)">
                     </figure>
                     <div class="space-y-3 text-sm text-neutral-600">
@@ -677,23 +697,21 @@
                 <article class="xp-card border-l-yellow-400">
                     <div class="xp-when">
                         <p class="xp-date">2026</p>
-                        <p class="xp-duration">[Durée]</p>
                         <span class="xp-badge bg-yellow-100 text-yellow-800 border-yellow-200">Mission client</span>
                     </div>
                     <div class="xp-body">
                         <div class="flex items-start gap-4 mb-5">
-                            <figure class="img-slot w-14 h-14 shrink-0 rounded-2xl border-yellow-200 bg-yellow-50" data-label=" ">
+                            <figure class="img-slot logo w-14 h-14 shrink-0 rounded-2xl border-yellow-200 bg-yellow-50 text-yellow-700" data-label=" " data-initials="P">
                                 <img src="assets/logo-parfumerie.png" alt="" onload="slotLoaded(this)" onerror="slotMissing(this)">
                             </figure>
                             <div>
                                 <h3 class="xp-role">Webdesigner WordPress</h3>
-                                <p class="xp-org">[Nom du client] — parfumerie et huiles essentielles</p>
+                                <p class="xp-org">Client privé — parfumerie et huiles essentielles</p>
                             </div>
                         </div>
                         <ul class="xp-missions">
                             <li>Conception et réalisation du site sous WordPress pour un client réel.</li>
                             <li>Catalogue produits avec affichage des prix et commande via un lien vers WhatsApp, sans paiement en ligne.</li>
-                            <li>[Mission à compléter — ex. échanges avec le client, choix graphiques, mise en ligne]</li>
                         </ul>
                         <div class="xp-footer">
                             <div class="flex flex-wrap gap-1.5"><span class="method-tag">WordPress</span><span class="method-tag">Webdesign</span><span class="method-tag">Relation client</span></div>
@@ -704,17 +722,17 @@
                 <article class="xp-card border-l-blue-400">
                     <div class="xp-when">
                         <p class="xp-date">2026</p>
-                        <p class="xp-duration">[Durée]</p>
+                        <p class="xp-duration">9 semaines</p>
                         <span class="xp-badge bg-blue-100 text-blue-800 border-blue-200">Stage · BUT3</span>
                     </div>
                     <div class="xp-body">
                         <div class="flex items-start gap-4 mb-5">
-                            <figure class="img-slot w-14 h-14 shrink-0 rounded-2xl border-blue-200 bg-blue-50" data-label=" ">
+                            <figure class="img-slot logo w-14 h-14 shrink-0 rounded-2xl border-blue-200 bg-blue-50 text-blue-700" data-label=" " data-initials="A">
                                 <img src="assets/logo-acm.png" alt="" onload="slotLoaded(this)" onerror="slotMissing(this)">
                             </figure>
                             <div>
                                 <h3 class="xp-role">Conceptrice UX & développeuse web</h3>
-                                <p class="xp-org">Association ACM — action sociale et interculturelle · [Ville]</p>
+                                <p class="xp-org">Association ACM — action sociale et interculturelle · Épinay-sur-Seine</p>
                             </div>
                         </div>
                         <ul class="xp-missions">
@@ -732,17 +750,17 @@
                 <article class="xp-card border-l-emerald-400">
                     <div class="xp-when">
                         <p class="xp-date">2026</p>
-                        <p class="xp-duration">[Durée]</p>
+                        <p class="xp-duration">9 semaines</p>
                         <span class="xp-badge bg-emerald-100 text-emerald-800 border-emerald-200">Stage · BUT3</span>
                     </div>
                     <div class="xp-body">
                         <div class="flex items-start gap-4 mb-5">
-                            <figure class="img-slot w-14 h-14 shrink-0 rounded-2xl border-emerald-200 bg-emerald-50" data-label=" ">
+                            <figure class="img-slot logo w-14 h-14 shrink-0 rounded-2xl border-emerald-200 bg-emerald-50 text-emerald-700" data-label=" " data-initials="R">
                                 <img src="assets/logo-rj10.png" alt="" onload="slotLoaded(this)" onerror="slotMissing(this)">
                             </figure>
                             <div>
                                 <h3 class="xp-role">Développeuse web — conception d'interface</h3>
-                                <p class="xp-org">RJ10 — centre de formation · [Ville]</p>
+                                <p class="xp-org">RJ10 — centre de formation</p>
                             </div>
                         </div>
                         <ul class="xp-missions">
@@ -765,7 +783,7 @@
                     </div>
                     <div class="xp-body">
                         <div class="flex items-start gap-4 mb-5">
-                            <figure class="img-slot w-14 h-14 shrink-0 rounded-2xl border-purple-200 bg-purple-50" data-label=" ">
+                            <figure class="img-slot logo w-14 h-14 shrink-0 rounded-2xl border-purple-200 bg-purple-50 text-purple-700" data-label=" " data-initials="P">
                                 <img src="assets/logo-planpoitrines.png" alt="" onload="slotLoaded(this)" onerror="slotMissing(this)">
                             </figure>
                             <div>
