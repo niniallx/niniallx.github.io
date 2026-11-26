@@ -71,7 +71,7 @@
                 // Apparition au défilement, échelonnée dans chaque groupe
                 const groups = [
                     '#projets > div:first-child', '#projets article',
-                    '#methode > div:first-child',
+                    '#methode > div:first-child', '.method-card',
                     '#about .lg\\:col-span-5', '#about .lg\\:col-span-7 > *',
                     '#experience > div:first-child', '.xp-card', '#experience > div:last-child',
                     '#dev > div:first-child', '.dev-card', '#contact > div'
@@ -102,27 +102,54 @@
                 }
             });
         })();
-        // Méthode : la frise se trace au défilement et allume chaque étape
+        // Méthode : cartes déplaçables, sans sortir de la section
         document.addEventListener('DOMContentLoaded', () => {
+            const section = document.getElementById('methode');
             const grid = document.getElementById('method-grid');
-            if (!grid || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            const reset = document.getElementById('method-reset');
+            if (!section || !grid || !window.matchMedia('(pointer: fine)').matches) return;
+            section.classList.add('method-drag');
             const cards = [...grid.querySelectorAll('.method-card')];
-            grid.classList.add('method-anim');
-            const desktop = window.matchMedia('(min-width: 1024px)');
-            function update() {
-                const vh = window.innerHeight;
-                if (desktop.matches) {
-                    const top = grid.getBoundingClientRect().top;
-                    const p = Math.max(0, Math.min(1, (vh * 0.85 - top) / (vh * 0.5)));
-                    grid.style.setProperty('--progress', (p * 100).toFixed(1) + '%');
-                    cards.forEach((c, i) => c.classList.toggle('active', p >= i / (cards.length - 1) - 0.02));
-                } else {
-                    cards.forEach(c => c.classList.toggle('active', c.getBoundingClientRect().top < vh * 0.8));
-                }
-            }
-            window.addEventListener('scroll', update, { passive: true });
-            window.addEventListener('resize', update);
-            update();
+            const pos = new Map(cards.map(c => [c, { x: 0, y: 0 }]));
+            let topZ = 10;
+            function place(c, x, y) { pos.set(c, { x, y }); c.style.left = x + 'px'; c.style.top = y + 'px'; }
+            cards.forEach(card => {
+                card.classList.add('draggable');
+                card.addEventListener('pointerdown', e => {
+                    if (e.button !== 0) return;
+                    e.preventDefault();
+                    const start = pos.get(card);
+                    const r = card.getBoundingClientRect(), b = section.getBoundingClientRect();
+                    // limites : la carte reste entièrement dans la section
+                    const lim = {
+                        minX: start.x - (r.left - b.left), maxX: start.x + (b.right - r.right),
+                        minY: start.y - (r.top - b.top), maxY: start.y + (b.bottom - r.bottom)
+                    };
+                    const sx = e.clientX, sy = e.clientY;
+                    card.setPointerCapture(e.pointerId);
+                    card.style.zIndex = ++topZ;
+                    card.classList.add('dragging');
+                    const move = ev => {
+                        const x = Math.max(lim.minX, Math.min(lim.maxX, start.x + ev.clientX - sx));
+                        const y = Math.max(lim.minY, Math.min(lim.maxY, start.y + ev.clientY - sy));
+                        place(card, x, y);
+                    };
+                    const up = () => {
+                        card.classList.remove('dragging');
+                        card.removeEventListener('pointermove', move);
+                        card.removeEventListener('pointerup', up);
+                        card.removeEventListener('pointercancel', up);
+                        if (reset) reset.hidden = [...pos.values()].every(p => p.x === 0 && p.y === 0);
+                    };
+                    card.addEventListener('pointermove', move);
+                    card.addEventListener('pointerup', up);
+                    card.addEventListener('pointercancel', up);
+                });
+            });
+            function resetAll() { cards.forEach(c => { place(c, 0, 0); c.style.zIndex = ''; }); topZ = 10; if (reset) reset.hidden = true; }
+            if (reset) reset.addEventListener('click', resetAll);
+            let w = window.innerWidth;
+            window.addEventListener('resize', () => { if (window.innerWidth !== w) { w = window.innerWidth; resetAll(); } });
         });
         // Apparition douce des sections des études de cas au défilement
         document.addEventListener('DOMContentLoaded', () => {
@@ -442,37 +469,26 @@
         @keyframes stickerPop { from { opacity: 0; scale: .4; } to { opacity: 1; scale: 1; } }
         @keyframes stickerFloat { 0%, 100% { translate: 0 0; } 50% { translate: 0 -8px; } }
 
-        [data-reveal] { opacity: 0; transform: translateY(32px); transition: opacity .8s ease, transform .8s cubic-bezier(.16, 1, .3, 1); }
-        [data-reveal].in { opacity: 1; transform: none; }
+        [data-reveal] { opacity: 0; translate: 0 32px; transition: opacity .8s ease, translate .8s cubic-bezier(.16, 1, .3, 1); }
+        [data-reveal].in { opacity: 1; translate: 0 0; }
         .marquee:hover { animation-play-state: paused; }
         #projets .case-cover { transition: box-shadow .5s, transform .6s cubic-bezier(.16, 1, .3, 1); }
         #projets article:hover .case-cover { transform: translateY(-6px) rotate(-.4deg); }
 
         @media (prefers-reduced-motion: reduce) {
             .hero-seq > *, .hero-visual, .hero-visual .sticker { opacity: 1; animation: none; }
-            [data-reveal] { opacity: 1; transform: none; transition: none; }
+            [data-reveal] { opacity: 1; translate: none; transition: none; }
             .scroll-progress { display: none; }
         }
-        /* Méthode : frise animée */
-        .method-track { display: none; }
-        @media (min-width: 1024px) {
-            .method-track { display: block; position: absolute; left: 10%; right: 10%; top: -2.1rem; height: 3px; border-radius: 9999px; background: #ececec; }
-            .method-track-fill { height: 100%; width: var(--progress, 0%); border-radius: inherit; background: linear-gradient(90deg, #10b981, #eab308, #ec4899, #a855f7, #3b82f6); transition: width .25s linear; }
-            .method-dot { position: absolute; top: -2.55rem; left: 50%; width: 15px; height: 15px; margin-left: -7.5px; border-radius: 9999px; background: #fff; border: 3px solid #d4d4d4; transition: border-color .4s, background-color .4s, scale .4s cubic-bezier(.34, 1.56, .64, 1); z-index: 1; }
-            .method-card.lg\:translate-y-6 .method-dot { top: -4.05rem; }
-            .method-card.active .method-dot { border-color: var(--accent); background: var(--accent); scale: 1.25; box-shadow: 0 0 0 0 var(--accent); animation: dotPulse 1.6s ease-out 1; }
-        }
-        @media (max-width: 1023px) { .method-dot { display: none; } }
-        @keyframes dotPulse { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); } 100% { box-shadow: 0 0 0 14px transparent; } }
-        .method-card { position: relative; transition: opacity .6s ease, scale .6s cubic-bezier(.16, 1, .3, 1), translate .5s cubic-bezier(.16, 1, .3, 1), rotate .5s, box-shadow .5s, border-color .5s; }
-        .method-anim .method-card { opacity: .35; scale: .96; }
-        .method-anim .method-card.active { opacity: 1; scale: 1; box-shadow: 0 24px 44px -26px color-mix(in srgb, var(--accent) 70%, transparent); border-color: var(--accent); }
-        .method-anim .method-card .method-num { display: inline-block; transition: scale .5s cubic-bezier(.34, 1.56, .64, 1); }
-        .method-anim .method-card.active .method-num { scale: 1.15; transform-origin: left center; }
-        .method-anim .method-card .method-tag { opacity: 0; translate: 0 6px; transition: opacity .4s, translate .4s; }
-        .method-anim .method-card.active .method-tag { opacity: 1; translate: 0 0; }
-        .method-anim .method-card.active .method-tag:nth-child(2) { transition-delay: .12s; }
-        .method-card:hover { translate: 0 -8px; rotate: -1deg; }
+        /* Méthode : cartes déplaçables dans la section */
+        .method-hint { display: none; }
+        .method-drag .method-hint, .method-hint.on { position: relative; z-index: 40; display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.25rem; margin: -3rem 0 2.5rem; width: fit-content; font-size: .85rem; color: #737373; }
+        .method-reset { display: inline-flex; align-items: center; gap: .4rem; padding: .35rem .8rem; border-radius: 9999px; border: 1px solid #e5e5e5; background: #fff; font-weight: 600; color: #404040; cursor: pointer; transition: border-color .2s; }
+        .method-reset:hover { border-color: #171717; }
+        .method-reset[hidden] { display: none; }
+        .method-card.draggable { position: relative; cursor: grab; user-select: none; -webkit-user-select: none; touch-action: none; transition: left .45s cubic-bezier(.16, 1, .3, 1), top .45s cubic-bezier(.16, 1, .3, 1), rotate .3s, scale .3s, box-shadow .3s, opacity .8s ease, translate .8s cubic-bezier(.16, 1, .3, 1); }
+        .method-card.draggable:hover { box-shadow: 0 18px 36px -24px rgba(0,0,0,.3); }
+        .method-card.dragging { cursor: grabbing; z-index: 30; rotate: 2.5deg; scale: 1.05; box-shadow: 0 30px 50px -24px rgba(0,0,0,.35); transition: rotate .2s, scale .2s, box-shadow .2s; }
         /* Cartes développement */
         .dev-card {
             cursor: pointer;
@@ -749,38 +765,41 @@
              MÉTHODE
              ============================================================ -->
         <section id="methode" class="max-w-6xl mx-auto px-6 py-24 border-t border-neutral-100">
-            <div class="mb-16">
+            <div class="mb-16 method-head">
                 <p class="text-xs font-bold uppercase tracking-widest text-yellow-500 mb-2">Méthode</p>
                 <h2 class="text-3xl md:text-5xl font-black tracking-tight max-w-3xl">Comment je travaille sur un projet</h2>
             </div>
+            <div class="method-hint">
+                <span><i class="fa-regular fa-hand"></i> Attrapez une carte pour la déplacer</span>
+                <button type="button" id="method-reset" class="method-reset" hidden><i class="fa-solid fa-rotate-left"></i> Remettre en place</button>
+            </div>
 
-            <div id="method-grid" class="relative grid sm:grid-cols-2 lg:grid-cols-5 gap-5 lg:mt-14">
-                <div class="method-track" aria-hidden="true"><div class="method-track-fill"></div></div>
-                <div class="method-card bg-emerald-50 border-emerald-200" style="--accent:#10b981"><span class="method-dot" aria-hidden="true"></span>
+            <div id="method-grid" class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+                <div class="method-card bg-emerald-50 border-emerald-200">
                     <span class="method-num text-emerald-500">01</span>
                     <h3 class="font-heading text-xl font-extrabold mb-2">Comprendre</h3>
                     <p class="text-sm text-neutral-600 leading-relaxed mb-4">Échanges avec les personnes concernées, analyse de l'existant et des outils déjà utilisés.</p>
                     <div class="flex flex-wrap gap-1.5"><span class="method-tag">Entretiens</span><span class="method-tag">Benchmark</span></div>
                 </div>
-                <div class="method-card bg-yellow-50 border-yellow-200 lg:translate-y-6" style="--accent:#eab308"><span class="method-dot" aria-hidden="true"></span>
+                <div class="method-card bg-yellow-50 border-yellow-200 lg:translate-y-6">
                     <span class="method-num text-yellow-500">02</span>
                     <h3 class="font-heading text-xl font-extrabold mb-2">Définir</h3>
                     <p class="text-sm text-neutral-600 leading-relaxed mb-4">Identifier les profils d'utilisateurs, leurs besoins et formuler le problème à résoudre.</p>
                     <div class="flex flex-wrap gap-1.5"><span class="method-tag">Profils</span><span class="method-tag">Problématique</span></div>
                 </div>
-                <div class="method-card bg-pink-50 border-pink-200" style="--accent:#ec4899"><span class="method-dot" aria-hidden="true"></span>
+                <div class="method-card bg-pink-50 border-pink-200">
                     <span class="method-num text-pink-500">03</span>
                     <h3 class="font-heading text-xl font-extrabold mb-2">Structurer</h3>
                     <p class="text-sm text-neutral-600 leading-relaxed mb-4">Organiser les contenus et les parcours avant de penser au visuel.</p>
                     <div class="flex flex-wrap gap-1.5"><span class="method-tag">Arborescence</span><span class="method-tag">Wireframes</span></div>
                 </div>
-                <div class="method-card bg-purple-50 border-purple-200 lg:translate-y-6" style="--accent:#a855f7"><span class="method-dot" aria-hidden="true"></span>
+                <div class="method-card bg-purple-50 border-purple-200 lg:translate-y-6">
                     <span class="method-num text-purple-500">04</span>
                     <h3 class="font-heading text-xl font-extrabold mb-2">Designer</h3>
                     <p class="text-sm text-neutral-600 leading-relaxed mb-4">Maquettes haute fidélité et prototype cliquable dans Figma, partagés pour validation.</p>
                     <div class="flex flex-wrap gap-1.5"><span class="method-tag">Maquettes</span><span class="method-tag">Prototype</span></div>
                 </div>
-                <div class="method-card bg-blue-50 border-blue-200" style="--accent:#3b82f6"><span class="method-dot" aria-hidden="true"></span>
+                <div class="method-card bg-blue-50 border-blue-200">
                     <span class="method-num text-blue-500">05</span>
                     <h3 class="font-heading text-xl font-extrabold mb-2">Itérer & livrer</h3>
                     <p class="text-sm text-neutral-600 leading-relaxed mb-4">Ajuster selon les retours, puis préparer le passage au développement, ou intégrer moi-même.</p>
