@@ -489,6 +489,41 @@
         .method-card.draggable { position: relative; cursor: grab; user-select: none; -webkit-user-select: none; touch-action: none; transition: left .45s cubic-bezier(.16, 1, .3, 1), top .45s cubic-bezier(.16, 1, .3, 1), rotate .3s, scale .3s, box-shadow .3s, opacity .8s ease, translate .8s cubic-bezier(.16, 1, .3, 1); }
         .method-card.draggable:hover { box-shadow: 0 18px 36px -24px rgba(0,0,0,.3); }
         .method-card.dragging { cursor: grabbing; z-index: 30; rotate: 2.5deg; scale: 1.05; box-shadow: 0 30px 50px -24px rgba(0,0,0,.35); transition: rotate .2s, scale .2s, box-shadow .2s; }
+        /* ===== Étude de cas façon Behance ===== */
+        .bh-head { max-width: 52rem; margin-bottom: 3rem; }
+        .bh-title { font-family: 'Outfit', sans-serif; font-weight: 900; font-size: clamp(3.5rem, 9vw, 7.5rem); line-height: .95; letter-spacing: -.04em; margin-bottom: 1.25rem; }
+        .page p.bh-subtitle { font-size: clamp(1.15rem, 2vw, 1.5rem) !important; font-weight: 300; color: #525252 !important; line-height: 1.45; max-width: 40rem; }
+        .bh-wide { max-width: 88rem; margin: 0 auto; padding: 0 1.5rem; }
+        .bh-shot.img-slot { border: 0; border-radius: 1.75rem; aspect-ratio: 16 / 10; background: var(--c50); }
+        .bh-shot.img-slot > img { object-position: center top; }
+        .bh-intro { display: grid; gap: 2.5rem; padding: 5rem 0; border-bottom: 1px solid #e5e5e5; }
+        @media (min-width: 900px) { .bh-intro { grid-template-columns: 1.6fr 1fr; gap: 5rem; } }
+        .page p.bh-label { font-family: 'Outfit', sans-serif; font-weight: 900; font-size: .78rem !important; letter-spacing: .18em; text-transform: uppercase; color: var(--c700) !important; margin-bottom: .9rem; }
+        .page p.bh-text { font-size: 1.15rem !important; line-height: 1.7; color: #404040 !important; }
+        .page p.bh-question { margin-top: 1.5rem; font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.45rem !important; line-height: 1.3; color: #171717 !important; padding-left: 1.1rem; border-left: 4px solid var(--c500); }
+        .bh-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 2rem; align-content: start; }
+        .bh-meta dt { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #737373; margin-bottom: .3rem; }
+        .bh-meta dd { font-weight: 600; margin: 0; }
+        .bh-stack { display: flex; flex-direction: column; gap: 7rem; padding-top: 6rem; padding-bottom: 6rem; }
+        .bh-caption { display: grid; gap: .5rem 2rem; align-items: baseline; max-width: 72rem; margin: 0 auto 1.75rem; padding: 0 .25rem; }
+        @media (min-width: 900px) { .bh-caption { grid-template-columns: auto 18rem 1fr; } }
+        .bh-num { font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 1rem; color: var(--c500); }
+        .bh-caption h2 { font-family: 'Outfit', sans-serif; font-weight: 900; font-size: clamp(1.5rem, 2.6vw, 2rem); letter-spacing: -.02em; line-height: 1.15; }
+        .page .bh-caption p { font-size: 1.05rem !important; color: #525252 !important; line-height: 1.6; }
+        .bh-panel { background: linear-gradient(135deg, var(--c50), var(--c100)); border-radius: 1.75rem; padding: clamp(1.25rem, 4vw, 4rem); }
+        .bh-panel .bh-shot.img-slot { border-radius: 1rem; box-shadow: 0 40px 80px -45px rgba(3, 84, 63, .55); }
+        .bh-palette { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+        @media (min-width: 768px) { .bh-palette { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+        .bh-palette > div { aspect-ratio: 3 / 4; border-radius: 1.5rem; padding: 1.25rem; display: flex; flex-direction: column; justify-content: flex-end; gap: .2rem; border: 1px solid rgba(0,0,0,.06); }
+        .bh-palette span { font-size: .85rem; opacity: .85; }
+        .bh-palette b { font-family: 'Outfit', sans-serif; font-size: 1.15rem; letter-spacing: .02em; }
+        .bh-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem 3rem; background: var(--c50); border: 2px solid var(--c200); border-radius: 1.75rem; padding: 2.5rem; }
+        .bh-cta > div { flex: 1 1 22rem; }
+        .bh-next { width: 100%; margin-top: 5rem; padding: 3rem 0 0; border-top: 1px solid #e5e5e5; text-align: left; cursor: pointer; display: flex; flex-direction: column; gap: .25rem; }
+        .bh-next .bh-label { font-family: 'Outfit', sans-serif; font-weight: 900; font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; color: #737373; }
+        .bh-next-title { font-family: 'Outfit', sans-serif; font-weight: 900; font-size: clamp(2.5rem, 7vw, 5.5rem); letter-spacing: -.035em; line-height: 1; display: inline-flex; align-items: center; gap: 1.5rem; transition: gap .3s, color .3s; }
+        .bh-next:hover .bh-next-title { gap: 2.25rem; color: var(--c700); }
+        .bh-next-title i { font-size: .55em; }
         /* Cartes développement */
         .dev-card {
             cursor: pointer;
@@ -1215,43 +1250,84 @@
         </div>
     </div>
 
-    <div id="page-gardeco" class="page cs-page relative z-10" style="--c50:#f0fdf4;--c100:#dcfce7;--c200:#bbf7d0;--c500:#16a34a;--c700:#15803d;--c800:#166534">
-        <div class="max-w-6xl mx-auto px-6 pt-10 pb-24">
-            <div class="flex flex-wrap gap-3 justify-between items-center mb-14">
+    <div id="page-gardeco" class="page cs-page bh-page relative z-10" style="--c50:#f0fdf4;--c100:#dcfce7;--c200:#bbf7d0;--c500:#16a34a;--c700:#15803d;--c800:#166534">
+        <div class="max-w-6xl mx-auto px-6 pt-10">
+            <div class="flex flex-wrap gap-3 justify-between items-center mb-16">
                 <button onclick="showPage('home')" class="cs-btn"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button>
-                <div class="flex flex-wrap gap-3"><button onclick="showProject('acm-ui')" class="cs-btn cs-btn-dark">Projet suivant <i class="fa-solid fa-arrow-right"></i></button></div>
+                <button onclick="showProject('acm-ui')" class="cs-btn cs-btn-dark">Projet suivant <i class="fa-solid fa-arrow-right"></i></button>
             </div>
-
-            <span class="cs-tag">Plateforme web</span>
-            <h1 class="cs-h1">Gard&#x27;Éco</h1>
-            <p class="cs-subtitle">Une plateforme pour trouver un jardin partagé près de chez soi et y réserver une parcelle.</p>
-            <figure class="img-slot opt zoomable aspect-[16/10] cs-cover cs-shot" data-label="Visuel de couverture" data-caption="Gard&#x27;Éco"><img src="assets/gardeco-mockup-m1.jpg" alt="Gard&#x27;Éco" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure>
-            <div class="cs-meta"><div><p class="cs-meta-k">Support</p><p class="cs-meta-v">Web &amp; mobile</p></div><div><p class="cs-meta-k">Outil</p><p class="cs-meta-v">Figma</p></div><div><p class="cs-meta-k">Livrables</p><p class="cs-meta-v">Maquettes, prototype</p></div><div><p class="cs-meta-k">Profils</p><p class="cs-meta-v">Visiteur, membre, admin</p></div></div>
-
-            <div class="flex flex-wrap gap-12 lg:gap-16 items-start">
-                <nav aria-label="Sommaire" class="cs-nav">
-                    <p class="cs-meta-k mb-4">Sommaire</p>
-                    <a href="#gardeco-contexte" data-cs-target="gardeco-contexte" onclick="csScroll(event, 'gardeco-contexte')"><span class="cs-nav-num">01</span> Contexte</a><a href="#gardeco-probleme" data-cs-target="gardeco-probleme" onclick="csScroll(event, 'gardeco-probleme')"><span class="cs-nav-num">02</span> Problème</a><a href="#gardeco-trouver" data-cs-target="gardeco-trouver" onclick="csScroll(event, 'gardeco-trouver')"><span class="cs-nav-num">03</span> Trouver un jardin</a><a href="#gardeco-reserver" data-cs-target="gardeco-reserver" onclick="csScroll(event, 'gardeco-reserver')"><span class="cs-nav-num">04</span> Réserver une parcelle</a><a href="#gardeco-rejoindre" data-cs-target="gardeco-rejoindre" onclick="csScroll(event, 'gardeco-rejoindre')"><span class="cs-nav-num">05</span> Rejoindre la communauté</a><a href="#gardeco-partager" data-cs-target="gardeco-partager" onclick="csScroll(event, 'gardeco-partager')"><span class="cs-nav-num">06</span> Partager et échanger</a><a href="#gardeco-prototype" data-cs-target="gardeco-prototype" onclick="csScroll(event, 'gardeco-prototype')"><span class="cs-nav-num">07</span> Prototype</a>
-                </nav>
-                <div class="cs-body">
-<section id="gardeco-contexte" data-cs-section class="cs-section"><p class="cs-num">01</p><h2 class="cs-h2">Contexte</h2><p class="cs-lead">Des jardins partagés existent près de chez soi, mais ils sont difficiles à trouver et à réserver. Gard&#x27;Éco réunit l&#x27;offre en un seul endroit.</p><div class="cs-chips"><span class="cs-chip">Co-jardinage</span><span class="cs-chip">Réservation de parcelles</span><span class="cs-chip">Espace administrateur</span></div></section>
-<section id="gardeco-probleme" data-cs-section class="cs-section cs-problem-box"><p class="cs-num-line"><span class="cs-num">02</span> · Problème</p><p class="cs-problem">Comment permettre à des jardiniers, novices ou confirmés, de trouver un jardin et d&#x27;y réserver une parcelle en quelques étapes ?</p></section>
-<section id="gardeco-trouver" data-cs-section data-cs-media class="cs-section cs-story"><p class="cs-num">00</p><h2 class="cs-h2">Trouver un jardin</h2><p class="cs-lead">La liste des jardins affiche l'essentiel pour choisir : adresse, nombre de parcelles et surface.</p><figure class="img-slot opt zoomable aspect-[16/10] cs-shot cs-framed" data-label="Trouver un jardin" data-caption="Trouver un jardin"><img src="assets/gardeco-liste.jpg" alt="Liste des jardins sur desktop" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></section>
-<section id="gardeco-reserver" data-cs-section data-cs-media class="cs-section cs-story"><p class="cs-num">00</p><h2 class="cs-h2">Réserver une parcelle</h2><p class="cs-lead">Trois écrans sur mobile : choisir un jardin, indiquer ses parcelles et ce qu'on y cultive, confirmer.</p><figure class="img-slot opt zoomable aspect-[16/10] cs-shot" data-label="Réserver une parcelle" data-caption="Réserver une parcelle"><img src="assets/gardeco-mockup-m2.jpg" alt="Parcours de réservation sur mobile" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></section>
-<section id="gardeco-rejoindre" data-cs-section data-cs-media class="cs-section cs-story"><p class="cs-num">00</p><h2 class="cs-h2">Rejoindre la communauté</h2><p class="cs-lead">Des formulaires courts pour se connecter ou créer un compte, sur ordinateur comme sur téléphone.</p><figure class="img-slot opt zoomable aspect-[16/10] cs-shot" data-label="Rejoindre la communauté" data-caption="Rejoindre la communauté"><img src="assets/gardeco-mockup-m3.jpg" alt="Connexion sur desktop et inscription sur mobile" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></section>
-<section id="gardeco-partager" data-cs-section data-cs-media class="cs-section cs-story"><p class="cs-num">00</p><h2 class="cs-h2">Partager et échanger</h2><p class="cs-lead">Une fois connecté, chacun peut rechercher un jardin, proposer le sien ou contacter l'équipe.</p><figure class="img-slot opt zoomable aspect-[16/10] cs-shot" data-label="Partager et échanger" data-caption="Partager et échanger"><img src="assets/gardeco-mockup-m4.jpg" alt="Accueil connecté, partage de jardin et contact sur mobile" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></section>
-<section id="gardeco-prototype" data-cs-section class="cs-section cs-cta"><p class="cs-num">00</p><h2 class="cs-h2">Prototype</h2><p class="cs-lead">Le parcours complet est cliquable dans Figma, de l'accueil à la confirmation de réservation.</p><a href="https://www.figma.com/proto/WfWHIDe4Rg7CFrm2daqzvi/Maquettes-et-Prototypes?node-id=2-5" target="_blank" class="cs-btn cs-btn-dark cs-btn-lg"><i class="fa-brands fa-figma"></i> Voir le prototype</a></section>
-                </div>
-            </div>
-
-            <!--DETAIL-->
-
-            <div class="flex justify-center pt-16">
-                <button onclick="showProject('acm-ui')" class="cs-btn cs-btn-dark cs-btn-lg">Projet suivant : Ike Oluwa <i class="fa-solid fa-arrow-right"></i></button>
+            <div class="bh-head">
+                <span class="cs-tag">Plateforme web · Web & mobile</span>
+                <h1 class="bh-title">Gard'Éco</h1>
+                <p class="bh-subtitle">Trouver un jardin partagé près de chez soi et y réserver une parcelle.</p>
             </div>
         </div>
-    </div>
 
+        <div class="bh-wide" data-cs-section>
+            <figure class="bh-shot zoomable img-slot opt" data-label="Gard'Éco" data-caption="Gard'Éco sur desktop et mobile"><img src="assets/gardeco-mockup-m1.jpg" alt="Gard'Éco sur ordinateur et sur téléphone" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="bh-intro" data-cs-section>
+                <div>
+                    <p class="bh-label">Le projet</p>
+                    <p class="bh-text">Des jardins partagés existent près de chez soi, mais ils sont difficiles à trouver et à réserver. Gard'Éco réunit l'offre en un seul endroit, pour les jardiniers novices comme confirmés.</p>
+                    <p class="bh-question">Comment trouver un jardin et y réserver une parcelle en quelques étapes ?</p>
+                </div>
+                <dl class="bh-meta">
+                    <div><dt>Support</dt><dd>Web & mobile</dd></div>
+                    <div><dt>Outil</dt><dd>Figma</dd></div>
+                    <div><dt>Livrables</dt><dd>Maquettes, prototype</dd></div>
+                    <div><dt>Profils</dt><dd>Visiteur, membre, admin</dd></div>
+                </dl>
+            </div>
+        </div>
+
+        <div class="bh-wide bh-stack">
+            <section class="bh-block" data-cs-section>
+                <div class="bh-caption"><span class="bh-num">01</span><h2>Trouver un jardin</h2><p>Adresse, nombre de parcelles et surface : l'essentiel pour choisir, visible d'un coup d'œil.</p></div>
+                <div class="bh-panel"><figure class="bh-shot bh-framed zoomable img-slot opt" data-label="Liste des jardins" data-caption="Liste des jardins"><img src="assets/gardeco-liste.jpg" alt="Liste des jardins sur desktop" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></div>
+            </section>
+
+            <section class="bh-block" data-cs-section>
+                <div class="bh-caption"><span class="bh-num">02</span><h2>Réserver une parcelle</h2><p>Trois écrans sur mobile : choisir, indiquer ses parcelles et ce qu'on y cultive, confirmer.</p></div>
+                <figure class="bh-shot zoomable img-slot opt" data-label="Réservation" data-caption="Parcours de réservation sur mobile"><img src="assets/gardeco-mockup-m2.jpg" alt="Parcours de réservation sur mobile" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure>
+            </section>
+
+            <section class="bh-block" data-cs-section>
+                <div class="bh-caption"><span class="bh-num">03</span><h2>Rejoindre la communauté</h2><p>Des formulaires courts pour se connecter ou créer un compte.</p></div>
+                <figure class="bh-shot zoomable img-slot opt" data-label="Connexion" data-caption="Connexion et inscription"><img src="assets/gardeco-mockup-m3.jpg" alt="Connexion sur desktop et inscription sur mobile" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure>
+            </section>
+
+            <section class="bh-block" data-cs-section>
+                <div class="bh-caption"><span class="bh-num">04</span><h2>Partager et échanger</h2><p>Une fois connecté : rechercher un jardin, proposer le sien ou contacter l'équipe.</p></div>
+                <figure class="bh-shot zoomable img-slot opt" data-label="Partage" data-caption="Accueil connecté, partage et contact"><img src="assets/gardeco-mockup-m4.jpg" alt="Accueil connecté, partage de jardin et contact sur mobile" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure>
+            </section>
+
+            <section class="bh-block" data-cs-section>
+                <div class="bh-caption"><span class="bh-num">05</span><h2>Identité visuelle</h2><p>Des verts tirés du jardin, un fond menthe clair et des photos de jardiniers.</p></div>
+                <div class="bh-palette">
+                    <div style="background:#03543F;color:#fff"><span>Vert forêt</span><b>#03543F</b></div>
+                    <div style="background:#5ED368;color:#052e16"><span>Vert vif</span><b>#5ED368</b></div>
+                    <div style="background:#59CD90;color:#052e16"><span>Vert menthe</span><b>#59CD90</b></div>
+                    <div style="background:#F2FFF7;color:#052e16"><span>Fond</span><b>#F2FFF7</b></div>
+                    <div style="background:#202020;color:#fff"><span>Texte</span><b>#202020</b></div>
+                </div>
+            </section>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 pb-24">
+            <div class="bh-cta" data-cs-section>
+                <div><p class="bh-label">Prototype</p><p class="bh-text">Le parcours complet est cliquable dans Figma, de l'accueil à la confirmation.</p></div>
+                <a href="https://www.figma.com/proto/WfWHIDe4Rg7CFrm2daqzvi/Maquettes-et-Prototypes?node-id=2-5" target="_blank" class="cs-btn cs-btn-dark cs-btn-lg"><i class="fa-brands fa-figma"></i> Voir le prototype</a>
+            </div>
+
+            <button onclick="showProject('acm-ui')" class="bh-next" data-cs-section>
+                <span class="bh-label">Projet suivant</span>
+                <span class="bh-next-title">Ike Oluwa <i class="fa-solid fa-arrow-right"></i></span>
+            </button>
+        </div>
+    </div>
     <div id="page-acm-ui" class="page cs-page relative z-10" style="--c50:#eff6ff;--c100:#dbeafe;--c200:#bfdbfe;--c500:#3b82f6;--c700:#1d4ed8;--c800:#1e40af">
         <div class="max-w-6xl mx-auto px-6 pt-10 pb-24">
             <div class="flex flex-wrap gap-3 justify-between items-center mb-14">
