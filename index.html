@@ -1740,21 +1740,12 @@
     <div class="rj-side" id="rj-side">
       <div class="rj-logo"><i></i>RJ10 Rappels</div>
       <button class="rj-on" data-i="0">Tableau de bord</button>
-      <button type="button" data-i="1">Stagiaires</button>
-      <button type="button" data-i="2">Formations</button>
-      <button type="button" data-i="3">Rappels</button>
-      <button type="button" data-i="4">Paramètres</button>
+            <button type="button" data-i="1">Formations</button>
+      <button type="button" data-i="2">Rappels</button>
+      <button type="button" data-i="3">Paramètres</button>
       <p id="rj-sidecap">Les chiffres clés et les titres en alerte, dès la connexion.</p>
     </div>
-    <div class="rj-view" id="rj-view"><img class="rj-on" src="assets/rj10-x-dashboard.jpg" alt="Tableau de bord" loading="lazy"><img src="assets/rj10-x-stagiaires.jpg" alt="Liste des stagiaires" loading="lazy"><img src="assets/rj10-x-formations.jpg" alt="Formations" loading="lazy"><img src="assets/rj10-x-rappel.jpg" alt="Rappels" loading="lazy"><img src="assets/rj10-x-parametre.jpg" alt="Paramètres de l'e-mail" loading="lazy"></div>
-  </div>
-</div></section>
-
-<section class="rj-s"><div class="rj-wrap">
-  <span class="rj-eyebrow">Zoom</span><h2 class="rj-h2">Les détails qui comptent</h2>
-  <div class="rj-det">
-    <div class="rj-dcard rj-b rj-up"><h3>La date se calcule toute seule</h3><p>À l'inscription, l'outil déduit l'expiration et affiche les jours restants.</p><div class="rj-im"><img src="assets/rj10-w-carte.jpg" alt="Calcul de la date d'expiration" loading="lazy"></div></div>
-    <div class="rj-dcard rj-a rj-up"><h3>Ce que reçoit le stagiaire</h3><p>Chaque rappel peut être relu : destinataire, formation et message.</p><div class="rj-im"><img src="assets/rj10-w-msg.jpg" alt="Message du rappel" loading="lazy"></div></div>
+    <div class="rj-view" id="rj-view"><img class="rj-on" src="assets/rj10-x-dashboard.jpg" alt="Tableau de bord" loading="lazy"><img src="assets/rj10-x-formations.jpg" alt="Formations" loading="lazy"><img src="assets/rj10-x-rappel.jpg" alt="Rappels" loading="lazy"><img src="assets/rj10-x-parametre.jpg" alt="Paramètres de l'e-mail" loading="lazy"></div>
   </div>
 </div></section>
 
@@ -1771,15 +1762,7 @@
   </div>
 </div></section>
 
-<section class="rj-s"><div class="rj-wrap">
-  <span class="rj-eyebrow">Bilan</span><h2 class="rj-h2">Ce que j'en retiens</h2>
-  <div class="rj-bil">
-    <div class="rj-bc rj-up"><small>Difficulté</small><p>Mener le projet seule, sans interlocuteur technique, en traduisant les besoins du centre en écrans simples.</p></div>
-    <div class="rj-bc rj-d rj-up"><small>Avec du recul</small><p>Passer plus de temps à comprendre le métier avant de concevoir.</p></div>
-  </div>
-</div></section>
-
-        <div class="rj-endw"><div class="max-w-6xl mx-auto px-6 pb-24">
+<div class="rj-endw"><div class="max-w-6xl mx-auto px-6 pb-24">
             <button onclick="showProject('planpoitrines-maquette')" class="bh-next" data-cs-section>
                 <span class="bh-label">Projet suivant</span>
                 <span class="bh-next-title">Plan Poitrines <i class="fa-solid fa-arrow-right"></i></span>
@@ -2521,7 +2504,7 @@
     </script>
     <script>
         (function () {
-            var caps = ["Les chiffres clés et les titres en alerte, dès la connexion.", "Tous les stagiaires, filtrables par statut : actifs, en alerte ou expirés.", "Une carte par formation, avec sa couleur, sa durée et son délai de rappel.", "L'historique des rappels envoyés, filtrable par formation et par statut.", "Le modèle d'e-mail, personnalisable sans toucher au code."];
+            var caps = ["Les chiffres clés et les titres en alerte, dès la connexion.", "Une carte par formation, avec sa couleur, sa durée et son délai de rappel.", "L'historique des rappels envoyés, filtrable par formation et par statut.", "Le modèle d'e-mail, personnalisable sans toucher au code."];
             var btns = document.querySelectorAll('#rj-side button');
             btns.forEach(function (b) {
                 b.addEventListener('click', function () {
