@@ -524,6 +524,19 @@
         .bh-next-title { font-family: 'Outfit', sans-serif; font-weight: 900; font-size: clamp(2.5rem, 7vw, 5.5rem); letter-spacing: -.035em; line-height: 1; display: inline-flex; align-items: center; gap: 1.5rem; transition: gap .3s, color .3s; }
         .bh-next:hover .bh-next-title { gap: 2.25rem; color: var(--c700); }
         .bh-next-title i { font-size: .55em; }
+        .bh-shot.img-slot.bh-natural { aspect-ratio: auto; background: transparent; }
+        .bh-shot.img-slot.bh-natural > img { position: static; height: auto; }
+        .bh-panel-center { display: flex; justify-content: center; }
+        .bh-panel-center .bh-shot { max-width: 560px; width: 100%; }
+        .bh-grid-2 { display: grid; gap: 1.5rem; }
+        @media (min-width: 900px) { .bh-grid-2 { grid-template-columns: 1.2fr 1fr; } }
+        .bh-col { display: flex; flex-direction: column; gap: 1.5rem; }
+        .bh-palette.bh-palette-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .bh-palette.bh-palette-col > div { aspect-ratio: 4 / 3; }
+        .bh-type { background: #3D2C20; color: #f5efe6; border-radius: 1.5rem; padding: 2rem; flex: 1; }
+        .page .bh-type .bh-label { color: #c1a264 !important; }
+        .page p.bh-type-name { font-family: 'Courier New', ui-monospace, monospace; font-size: clamp(1.6rem, 3vw, 2.2rem) !important; font-weight: 700; color: #f5efe6 !important; margin-bottom: .5rem; }
+        .page p.bh-type-sample { font-family: 'Courier New', ui-monospace, monospace; color: #d9c4a0 !important; font-size: 1rem !important; }
         /* Cartes développement */
         .dev-card {
             cursor: pointer;
@@ -745,15 +758,38 @@
                 </article>
 
                 <!-- PROJET 04 -->
-                <article class="group grid lg:grid-cols-12 gap-8 lg:gap-12 items-center cursor-pointer" onclick="showProject('noor')">
+                <article class="group grid lg:grid-cols-12 gap-8 lg:gap-12 items-center cursor-pointer" onclick="showProject('kuriosity')">
                     <div class="lg:col-span-7 lg:order-2">
-                        <figure class="img-slot case-cover aspect-[16/10] border-pink-200 bg-pink-50" data-label="Visuel projet — 1600×1000">
-                            <img src="assets/noor-dashboard.png" alt="Tableau de bord de l'application Noor" onload="slotLoaded(this)" onerror="slotMissing(this)">
+                        <figure class="img-slot case-cover aspect-[16/10] border-amber-200 bg-amber-50" data-label="Visuel projet — 1600×1000">
+                            <img src="assets/kuriosity-mockup-m1.jpg" alt="Site Kuriosity Club sur ordinateur" onload="slotLoaded(this)" onerror="slotMissing(this)">
                         </figure>
                     </div>
                     <div class="lg:col-span-5 lg:order-1">
                         <div class="flex items-center gap-4 mb-5">
-                            <span class="case-number text-pink-300">04</span>
+                            <span class="case-number text-amber-300">04</span>
+                            <span class="text-[10px] font-bold tracking-widest uppercase bg-amber-100 text-amber-900 px-2.5 py-1 rounded-full border border-amber-200/60">Refonte de site</span>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-black tracking-tight mb-4 group-hover:text-amber-800 transition-colors">Kuriosity Club</h3>
+                        <p class="text-neutral-500 font-light leading-relaxed mb-6">La refonte du site d'un escape game : une identité immersive façon dossier d'enquête et une réservation plus claire.</p>
+                        <dl class="grid grid-cols-3 gap-4 py-5 border-y border-neutral-100 mb-6 text-sm">
+                            <div><dt class="text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-1">Support</dt><dd class="font-semibold">Site web</dd></div>
+                            <div><dt class="text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-1">Outil</dt><dd class="font-semibold">Figma</dd></div>
+                            <div><dt class="text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-1">Équipe</dt><dd class="font-semibold">3 personnes</dd></div>
+                        </dl>
+                        <span class="inline-flex items-center gap-2 font-heading font-bold text-sm group-hover:gap-3 transition-all">Voir l'étude de cas <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </article>
+
+<!-- PROJET 05 -->
+                <article class="group grid lg:grid-cols-12 gap-8 lg:gap-12 items-center cursor-pointer" onclick="showProject('noor')">
+                    <div class="lg:col-span-7">
+                        <figure class="img-slot case-cover aspect-[16/10] border-pink-200 bg-pink-50" data-label="Visuel projet — 1600×1000">
+                            <img src="assets/noor-dashboard.png" alt="Tableau de bord de l'application Noor" onload="slotLoaded(this)" onerror="slotMissing(this)">
+                        </figure>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <div class="flex items-center gap-4 mb-5">
+                            <span class="case-number text-pink-300">05</span>
                             <span class="text-[10px] font-bold tracking-widest uppercase bg-pink-100 text-pink-800 px-2.5 py-1 rounded-full border border-pink-200/60">Application mobile</span>
                         </div>
                         <h3 class="text-3xl md:text-4xl font-black tracking-tight mb-4 group-hover:text-pink-600 transition-colors">Noor</h3>
@@ -767,7 +803,7 @@
                     </div>
                 </article>
 
-                <!-- PROJET 05 — emplacement libre pour un prochain projet Figma, masqué tant qu'il n'est pas prêt.
+                <!-- PROJET 06 — emplacement libre pour un prochain projet Figma, masqué tant qu'il n'est pas prêt.
                      Pour l'activer : retirer les balises de commentaire autour du bloc <article>, remplacer l'image et les textes,
                      et ajouter onclick="showProject('id-de-la-page')" sur <article>.
                 <article class="group grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -1178,6 +1214,91 @@
         </div>
     </div>
 
+    <div id="page-kuriosity" class="page cs-page bh-page relative z-10" style="--c50:#f5efe6;--c100:#ede1cc;--c200:#d9c4a0;--c500:#a8864f;--c700:#624332;--c800:#3d2c20">
+        <div class="max-w-6xl mx-auto px-6 pt-10">
+            <div class="flex flex-wrap gap-3 justify-between items-center mb-16">
+                <button onclick="showPage('home')" class="cs-btn"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button>
+                <button onclick="showProject('noor')" class="cs-btn cs-btn-dark">Projet suivant <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="bh-head">
+                <span class="cs-tag">Refonte de site · Identité visuelle</span>
+                <h1 class="bh-title">Kuriosity Club</h1>
+                <p class="bh-subtitle">La refonte du site d'un escape game, pensée comme un dossier d'enquête.</p>
+            </div>
+        </div>
+
+        <div class="bh-wide" data-cs-section>
+            <figure class="bh-shot zoomable img-slot opt" data-label="Kuriosity Club" data-caption="Kuriosity Club"><img src="assets/kuriosity-mockup-m1.jpg" alt="Pages du site Kuriosity Club sur ordinateur" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="bh-intro" data-cs-section>
+                <div>
+                    <p class="bh-label">Le projet</p>
+                    <p class="bh-text">Kuriosity Club propose des missions d'escape game à Troyes. La refonte devait plonger le visiteur dans l'univers du lieu dès la page d'accueil, tout en rendant les informations pratiques et la réservation faciles à trouver.</p>
+                    <p class="bh-question">Comment créer une ambiance immersive sans perdre en clarté ?</p>
+                </div>
+                <dl class="bh-meta">
+                    <div><dt>Support</dt><dd>Site web desktop</dd></div>
+                    <div><dt>Outil</dt><dd>Figma</dd></div>
+                    <div><dt>Livrables</dt><dd>Identité, arborescence, maquettes, prototype</dd></div>
+                    <div><dt>Équipe</dt><dd>3 personnes</dd></div>
+                </dl>
+            </div>
+        </div>
+
+        <div class="bh-wide bh-stack">
+            <section class="bh-block" data-cs-section>
+                <div class="bh-caption"><span class="bh-num">01</span><h2>Arborescence</h2><p>Quatre pages : l'accueil, une page par mission, la réservation et le contact.</p></div>
+                <div class="bh-panel bh-panel-center"><figure class="bh-shot zoomable img-slot opt bh-natural" data-label="Arborescence" data-caption="Arborescence"><img src="assets/kuriosity-arborescence.jpg" alt="Arborescence du site" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></div>
+            </section>
+
+            <section class="bh-block" data-cs-section>
+                <div class="bh-caption"><span class="bh-num">02</span><h2>Les pages</h2><p>Papier vieilli, bords déchirés et machine à écrire : chaque page reprend les codes d'un dossier d'enquête.</p></div>
+                <figure class="bh-shot zoomable img-slot opt" data-label="Pages Accueil, Contact et Réservation" data-caption="Pages Accueil, Contact et Réservation"><img src="assets/kuriosity-mockup-m2.jpg" alt="Pages Accueil, Contact et Réservation" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure>
+            </section>
+
+            <section class="bh-block" data-cs-section>
+                <div class="bh-caption"><span class="bh-num">03</span><h2>Réserver une mission</h2><p>Tarifs par nombre d'agents, puis choix de la mission et du créneau sur une même page.</p></div>
+                <div class="bh-panel"><figure class="bh-shot zoomable img-slot opt bh-framed" data-label="Réservation" data-caption="Réservation"><img src="assets/kuriosity-reservation.jpg" alt="Page de réservation" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></div>
+            </section>
+
+            <section class="bh-block" data-cs-section>
+                <div class="bh-caption"><span class="bh-num">04</span><h2>Infos pratiques</h2><p>Horaires, plan d'accès et FAQ regroupés sur la page contact.</p></div>
+                <div class="bh-panel"><figure class="bh-shot zoomable img-slot opt bh-framed" data-label="Horaires et FAQ" data-caption="Horaires et FAQ"><img src="assets/kuriosity-contact.jpg" alt="Horaires et FAQ de la page contact" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></div>
+            </section>
+
+            <section class="bh-block" data-cs-section>
+                <div class="bh-caption"><span class="bh-num">05</span><h2>Identité visuelle</h2><p>Une horloge romaine et un K pour la curiosité, des bruns et un or patiné pour l'ambiance.</p></div>
+                <div class="bh-grid-2">
+                    <figure class="bh-shot zoomable img-slot opt bh-natural" data-label="Logo et déclinaisons" data-caption="Logo et déclinaisons"><img src="assets/kuriosity-branding.jpg" alt="Logo, branding et déclinaisons" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure>
+                    <div class="bh-col">
+                        <div class="bh-palette bh-palette-col">
+                            <div style="background:#3D2C20;color:#f5efe6"><span>Brun profond</span><b>#3D2C20</b></div>
+                            <div style="background:#624332;color:#f5efe6"><span>Brun boutons</span><b>#624332</b></div>
+                            <div style="background:#C1A264;color:#2a1e16"><span>Or patiné</span><b>#C1A264</b></div>
+                            <div style="background:#F5EFE6;color:#2a1e16"><span>Blanc cassé</span><b>#F5EFE6</b></div>
+                        </div>
+                        <div class="bh-type"><p class="bh-label">Typographie</p><p class="bh-type-name">Elegant Typewriter</p><p class="bh-type-sample">Regular · Bold · 1234567890</p></div>
+                    </div>
+                </div>
+                <div class="mt-6"><figure class="bh-shot zoomable img-slot opt bh-natural" data-label="Mockups et pictogrammes" data-caption="Mockups et pictogrammes"><img src="assets/kuriosity-mockups-picto.jpg" alt="Mockups tote bag et téléphone, pictogrammes" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></div>
+            </section>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 pb-24">
+            <div class="bh-cta" data-cs-section>
+                <div><p class="bh-label">Prototype</p><p class="bh-text">Les quatre pages sont reliées et cliquables dans Figma.</p></div>
+                <a href="https://www.figma.com/proto/YvB94zO2WD8fmxwZgMjXDR/Kuriosity-Club?node-id=6-2&starting-point-node-id=6%3A2" target="_blank" class="cs-btn cs-btn-dark cs-btn-lg"><i class="fa-brands fa-figma"></i> Voir le prototype</a>
+            </div>
+
+            <button onclick="showProject('noor')" class="bh-next" data-cs-section>
+                <span class="bh-label">Projet suivant</span>
+                <span class="bh-next-title">Noor <i class="fa-solid fa-arrow-right"></i></span>
+            </button>
+        </div>
+    </div>
+
     <div id="page-noor" class="page cs-page relative z-10" style="--c50:#fdf2f8;--c100:#fce7f3;--c200:#fbcfe8;--c500:#ec4899;--c700:#be185d;--c800:#9d174d">
         <div class="max-w-6xl mx-auto px-6 pt-10 pb-24">
             <div class="flex flex-wrap gap-3 justify-between items-center mb-14">
@@ -1332,7 +1453,7 @@
         <div class="max-w-6xl mx-auto px-6 pt-10 pb-24">
             <div class="flex flex-wrap gap-3 justify-between items-center mb-14">
                 <button onclick="showPage('home')" class="cs-btn"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button>
-                <div class="flex flex-wrap gap-3"><button onclick="showProject('noor')" class="cs-btn cs-btn-dark">Projet suivant <i class="fa-solid fa-arrow-right"></i></button></div>
+                <div class="flex flex-wrap gap-3"><button onclick="showProject('kuriosity')" class="cs-btn cs-btn-dark">Projet suivant <i class="fa-solid fa-arrow-right"></i></button></div>
             </div>
 
             <span class="cs-tag">Plateforme associative</span>
@@ -1358,7 +1479,7 @@
             </div>
 
             <div class="flex justify-center pt-16">
-                <button onclick="showProject('noor')" class="cs-btn cs-btn-dark cs-btn-lg">Projet suivant : Noor <i class="fa-solid fa-arrow-right"></i></button>
+                <button onclick="showProject('kuriosity')" class="cs-btn cs-btn-dark cs-btn-lg">Projet suivant : Kuriosity Club <i class="fa-solid fa-arrow-right"></i></button>
             </div>
         </div>
     </div>
