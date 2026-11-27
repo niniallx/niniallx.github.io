@@ -177,7 +177,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..900,0..100,0..1;1,9..144,400..900,0..100,0..1&family=Inter:wght@300;400;500;600&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..900,0..100,0..1;1,9..144,400..900,0..100,0..1&family=Courier+Prime:wght@400;700&family=Special+Elite&family=Inter:wght@300;400;500;600&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
@@ -719,6 +719,130 @@
         #page-gardeco .gde-up.in{opacity:1;translate:0 0}
         @media(max-width:700px){#page-gardeco .gde-panel{padding:40px 24px 0;border-radius:24px}#page-gardeco .gde-phone{width:200px}#page-gardeco .gde-phone .gde-view{height:380px}#page-gardeco .gde-phones .gde-phone:nth-child(2){display:none}#page-gardeco .gde-phones{margin-bottom:-90px}#page-gardeco .gde-intro{padding-top:70px}#page-gardeco .gde-browser .gde-vw{height:420px}#page-gardeco .gde-sw{grid-template-columns:repeat(3,1fr)}#page-gardeco .gde-sw div{height:120px}#page-gardeco .gde-s{padding:80px 0}#page-gardeco .gde-flow .gde-phone{width:230px}}
         @media (prefers-reduced-motion: reduce) { #page-gardeco .gde-float { animation: none; } #page-gardeco .gde-up { opacity: 1; translate: none; transition: none; } }
+        /* Kuriosity Club : dossier d'enquete */
+        #page-kuriosity { --brun:#3D2C20; --bouton:#624332; --or:#C1A264; --creme:#F5EFE6; --kraft:#e9dcc3; --rouge:#a5402d; background:var(--creme); color:var(--brun); overflow-x:clip; }
+        #page-kuriosity img { display:block; max-width:100%; }
+        #page-kuriosity .kq-wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+        #page-kuriosity .kq-tw{font-family:'Special Elite',monospace}
+        #page-kuriosity .kq-cp{font-family:'Courier Prime',monospace}
+        #page-kuriosity .kq-grain{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+        #page-kuriosity /* hero */
+.kq-hero{background-color:var(--brun);color:var(--creme);padding:36px 0 120px;position:relative}
+        #page-kuriosity .kq-nav2{display:flex;justify-content:space-between;margin-bottom:64px}
+        #page-kuriosity .kq-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:4px;font-family:'Courier Prime';font-weight:700;font-size:13px;background:var(--creme);color:var(--brun);letter-spacing:.02em}
+        #page-kuriosity .kq-btn.kq-o{background:var(--or)}
+        #page-kuriosity .kq-hgrid{display:grid;gap:60px;align-items:center}
+        @media(min-width:960px){#page-kuriosity .kq-hgrid{grid-template-columns:1fr 1.15fr}}
+        #page-kuriosity .kq-file{font-family:'Courier Prime';font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--or)}
+        #page-kuriosity .kq-hero h1{font-family:'Special Elite';font-weight:400;font-size:clamp(54px,7.5vw,100px);line-height:1;margin:20px 0 22px}
+        #page-kuriosity .kq-hero h1 .kq-car{display:inline-block;width:.08em;height:.85em;background:var(--or);margin-left:.08em;vertical-align:-.05em;animation:kq-blink 1s steps(1) infinite}
+        @keyframes kq-blink{50%{opacity:0}}
+        #page-kuriosity .kq-hero .kq-sub{font-size:19px;line-height:1.55;color:#e0d2bd;max-width:440px}
+        #page-kuriosity .kq-stamp{display:inline-block;margin-top:34px;border:3px solid var(--rouge);color:#e07a63;font-family:'Courier Prime';font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:14px;padding:8px 16px;transform:rotate(-6deg);opacity:.9}
+        #page-kuriosity .kq-folder{position:relative;background:var(--kraft);padding:22px 22px 26px;border-radius:4px 14px 4px 4px;box-shadow:0 40px 70px -30px rgba(0,0,0,.7);transform:rotate(1.5deg)}
+        #page-kuriosity .kq-folder::before{content:"KURIOSITY · DOSSIER 04";position:absolute;top:-30px;left:0;background:var(--kraft);padding:8px 18px 6px;border-radius:8px 8px 0 0;font-family:'Courier Prime';font-weight:700;font-size:12px;letter-spacing:.14em;color:var(--bouton)}
+        #page-kuriosity .kq-folder 
+.kq-clip{position:absolute;top:-18px;right:60px;width:26px;height:62px;border:4px solid #b9b9b9;border-radius:14px;border-bottom-color:transparent;z-index:2}
+        #page-kuriosity .kq-hero-edge{position:absolute;left:0;right:0;bottom:-1px;height:40px;background:var(--creme);clip-path:polygon(0 60%,4% 35%,8% 55%,12% 30%,17% 60%,21% 40%,26% 58%,31% 28%,36% 55%,41% 38%,46% 62%,51% 30%,56% 52%,61% 35%,66% 60%,71% 32%,76% 57%,81% 38%,86% 60%,91% 30%,96% 55%,100% 40%,100% 100%,0 100%)}
+        #page-kuriosity /* rapport */
+.kq-rapport{padding:90px 0}
+        #page-kuriosity .kq-rgrid{display:grid;gap:40px}
+        @media(min-width:960px){#page-kuriosity .kq-rgrid{grid-template-columns:1.1fr 1fr;align-items:start}}
+        #page-kuriosity .kq-paper{background-color:#fbf7f0;padding:40px 38px;box-shadow:0 30px 60px -35px rgba(61,44,32,.6);position:relative}
+        #page-kuriosity .kq-paper h3{font-family:'Courier Prime';font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--bouton);margin-bottom:18px}
+        #page-kuriosity .kq-paper p{font-family:'Courier Prime';font-size:17px;line-height:1.7}
+        #page-kuriosity .kq-paper .kq-q{margin-top:26px;padding-top:22px;border-top:1px dashed #c9b593;font-family:'Special Elite';font-size:24px;line-height:1.35;color:var(--brun)}
+        #page-kuriosity .kq-form{display:grid;gap:16px}
+        #page-kuriosity .kq-form div{display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:end;font-family:'Courier Prime'}
+        #page-kuriosity .kq-form small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8a6f52;font-weight:700}
+        #page-kuriosity .kq-form span{font-size:17px;border-bottom:1.5px dotted #b49b78;padding-bottom:4px}
+        #page-kuriosity .kq-form .kq-st{justify-self:end;margin-top:6px;grid-template-columns:1fr;border:2px solid var(--or);color:var(--bouton);padding:6px 14px;transform:rotate(-4deg);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+        #page-kuriosity /* pièces */
+.kq-s{padding:100px 0;position:relative}
+        #page-kuriosity .kq-dark{background-color:var(--brun);color:var(--creme)}
+        #page-kuriosity .kq-kraft{background-color:var(--kraft)}
+        #page-kuriosity .kq-h{display:grid;gap:12px;margin-bottom:50px;max-width:620px}
+        #page-kuriosity .kq-tab{justify-self:start;font-family:'Courier Prime';font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;background:var(--brun);color:var(--or);padding:7px 14px 6px;border-radius:6px 6px 0 0;border-bottom:2px solid var(--or)}
+        #page-kuriosity .kq-dark .kq-tab{background:var(--or);color:var(--brun);border-color:var(--creme)}
+        #page-kuriosity .kq-h h2{font-family:'Special Elite';font-weight:400;font-size:clamp(34px,4.4vw,54px);line-height:1.05}
+        #page-kuriosity .kq-h p{font-size:17px;line-height:1.6;color:#6b5440}
+        #page-kuriosity .kq-dark .kq-h p{color:#d9c8af}
+        #page-kuriosity .kq-pin{position:absolute;top:-10px;left:50%;width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#e98a74,var(--rouge));box-shadow:0 4px 6px rgba(0,0,0,.35);transform:translateX(-50%);z-index:2}
+        #page-kuriosity .kq-arbo{max-width:560px;margin:0 auto;background:#fff;padding:16px;box-shadow:0 30px 60px -30px rgba(61,44,32,.6);position:relative;transform:rotate(-1deg)}
+        #page-kuriosity .kq-evid{display:grid;gap:40px;align-items:center}
+        @media(min-width:960px){#page-kuriosity .kq-evid{grid-template-columns:1.3fr .7fr}}
+        #page-kuriosity .kq-evid .shot{position:relative;background:#fff;padding:14px;box-shadow:0 40px 70px -30px rgba(0,0,0,.65);transform:rotate(-1deg)}
+        #page-kuriosity .kq-tag2{position:absolute;right:-14px;bottom:30px;background:var(--creme);color:var(--brun);font-family:'Courier Prime';font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:10px 14px 10px 26px;transform:rotate(6deg);box-shadow:0 8px 16px -8px rgba(0,0,0,.5);clip-path:polygon(14px 0,100% 0,100% 100%,14px 100%,0 50%)}
+        #page-kuriosity .kq-notes{font-family:'Courier Prime';font-size:16px;line-height:1.7;color:#e3d5c0;display:grid;gap:14px}
+        #page-kuriosity .kq-notes li{list-style:none;padding-left:26px;position:relative}
+        #page-kuriosity .kq-notes li::before{content:"→";position:absolute;left:0;color:var(--or)}
+        #page-kuriosity .kq-ident{display:grid;gap:22px}
+        @media(min-width:960px){#page-kuriosity .kq-ident{grid-template-columns:.9fr 1.1fr}}
+        #page-kuriosity .kq-logo{background:var(--creme);display:grid;place-items:center;padding:20px;box-shadow:0 30px 60px -35px rgba(61,44,32,.6)}
+        #page-kuriosity .kq-logo 
+.right{display:grid;gap:22px}
+        #page-kuriosity .kq-chips{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+        #page-kuriosity .kq-chip{background:#fff;padding:8px 8px 14px;box-shadow:0 14px 26px -16px rgba(61,44,32,.6)}
+        #page-kuriosity .kq-chip i{display:block;height:110px}
+        #page-kuriosity .kq-chip b{display:block;font-family:'Courier Prime';font-size:13px;margin-top:10px}
+        #page-kuriosity .kq-chip span{font-family:'Courier Prime';font-size:12px;color:#8a6f52}
+        #page-kuriosity .kq-chip:nth-child(odd){transform:rotate(-2deg)}
+        #page-kuriosity .kq-chip:nth-child(even){transform:rotate(2deg)}
+        #page-kuriosity .kq-type{background:#fbf7f0;padding:30px;box-shadow:0 30px 60px -35px rgba(61,44,32,.6)}
+        #page-kuriosity .kq-type small{font-family:'Courier Prime';font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8a6f52}
+        #page-kuriosity .kq-type div{font-family:'Special Elite';font-size:46px;margin:8px 0 4px}
+        #page-kuriosity .kq-type p{font-family:'Special Elite';font-size:18px;color:#6b5440;letter-spacing:.04em}
+        #page-kuriosity .kq-up{opacity:0;translate:0 30px;transition:opacity .7s,translate .7s cubic-bezier(.2,.8,.2,1)}
+        #page-kuriosity .kq-up.in{opacity:1;translate:0 0}
+        #page-kuriosity .kq-slam{opacity:0;scale:2.2;transition:opacity .25s,scale .35s cubic-bezier(.3,1.6,.5,1)}
+        #page-kuriosity .kq-slam.in{opacity:.9;scale:1}
+        @media(max-width:700px){#page-kuriosity .kq-paper{padding:28px 22px}#page-kuriosity .kq-chips{grid-template-columns:repeat(2,1fr)}#page-kuriosity .kq-s{padding:80px 0}#page-kuriosity .kq-form div{grid-template-columns:90px 1fr}}
+        #page-kuriosity /* dossier ouvert */
+.kq-open{padding:100px 0 110px}
+        #page-kuriosity .kq-spread{display:grid;background:var(--kraft);border-radius:10px;box-shadow:0 50px 90px -50px rgba(61,44,32,.8);position:relative;padding:18px}
+        @media(min-width:960px){#page-kuriosity .kq-spread{grid-template-columns:1fr 1fr}#page-kuriosity .kq-spread::after{content:"";position:absolute;top:18px;bottom:18px;left:50%;width:2px;background:linear-gradient(#cdb895,#a88d66,#cdb895);box-shadow:0 0 18px rgba(80,50,20,.35)}}
+        #page-kuriosity .kq-pg{background:#fbf7f0;padding:48px 44px;position:relative}
+        #page-kuriosity .kq-pg h3{font-family:'Courier Prime';font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--bouton);margin-bottom:18px}
+        #page-kuriosity .kq-pg p{font-family:'Courier Prime';font-size:17px;line-height:1.7}
+        #page-kuriosity .kq-pg .kq-q{font-family:'Special Elite';font-size:26px;line-height:1.35;margin-top:28px;padding-top:22px;border-top:1px dashed #c9b593}
+        #page-kuriosity .kq-pg .kq-num{position:absolute;bottom:16px;right:22px;font-family:'Courier Prime';font-size:12px;color:#a8916f}
+        #page-kuriosity .kq-ttl{font-family:'Special Elite';font-size:clamp(30px,3.6vw,44px);margin-bottom:10px}
+        #page-kuriosity /* mur d'enquête */
+.kq-wall{padding:100px 0 120px;background-color:#6b4b33;background-image:radial-gradient(rgba(0,0,0,.18) 1px,transparent 1.4px),radial-gradient(rgba(255,230,190,.12) 1px,transparent 1.4px);background-size:7px 7px,11px 11px;color:var(--creme);position:relative;overflow:hidden}
+        #page-kuriosity .kq-wall .kq-intro-w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:end;margin-bottom:40px}
+        #page-kuriosity .kq-wall h2{font-family:'Special Elite';font-weight:400;font-size:clamp(36px,4.6vw,58px)}
+        #page-kuriosity .kq-wall .kq-intro-w p{font-family:'Courier Prime';font-size:16px;color:#f0e1c9;max-width:380px}
+        #page-kuriosity .kq-board{position:relative}
+        #page-kuriosity .kq-it{background:#fff;padding:10px;box-shadow:0 22px 40px -18px rgba(0,0,0,.7);position:relative}
+        #page-kuriosity .kq-it .kq-pin{position:absolute;top:-9px;left:50%;width:20px;height:20px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ef8e78,#a5402d);box-shadow:0 4px 6px rgba(0,0,0,.4);transform:translateX(-50%);z-index:3}
+        #page-kuriosity .kq-it .kq-note{position:absolute;background:var(--creme);color:var(--brun);font-family:'Courier Prime';font-size:13px;line-height:1.4;padding:10px 12px;max-width:220px;box-shadow:0 10px 18px -10px rgba(0,0,0,.6);z-index:2}
+        #page-kuriosity .kq-it .kq-note b{display:block;font-family:'Special Elite';font-weight:400;font-size:17px;margin-bottom:2px}
+        #page-kuriosity .kq-it.kq-paper2{background:var(--creme)}
+        #page-kuriosity .kq-strings{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:visible}
+        #page-kuriosity .kq-strings line{stroke:#c0392b;stroke-width:2.2;opacity:.9}
+        #page-kuriosity .kq-chipsw{display:flex;gap:6px;padding:6px}
+        #page-kuriosity .kq-chipsw i{width:46px;height:64px;display:block}
+        @media(min-width:960px){#page-kuriosity .kq-board{height:960px}#page-kuriosity .kq-it{position:absolute;z-index:2;transition:transform .35s}#page-kuriosity .kq-it:hover{transform:rotate(0) scale(1.03)!important;z-index:5}#page-kuriosity .kq-it .kq-note{left:18px;bottom:-34px;transform:rotate(-2deg)}#page-kuriosity .kq-a1{left:0;top:40px;width:28%;transform:rotate(-3deg)}#page-kuriosity .kq-a2{left:34%;top:0;width:64%;transform:rotate(1.5deg)}#page-kuriosity .kq-a3{left:2%;top:540px;width:44%;transform:rotate(2deg)}#page-kuriosity .kq-a4{left:53%;top:560px;width:21%;transform:rotate(-4deg)}#page-kuriosity .kq-a5{left:79%;top:620px;transform:rotate(3deg)}#page-kuriosity .kq-a5 .kq-note{left:-30px;bottom:auto;top:calc(100% + 6px);width:220px}}
+        @media(max-width:959px){#page-kuriosity .kq-board{display:grid;gap:56px}#page-kuriosity .kq-it .kq-note{position:static;margin-top:10px;max-width:none}#page-kuriosity .kq-strings{display:none}#page-kuriosity .kq-a5{justify-self:start}}
+        #page-kuriosity /* loupe */
+.kq-loupe-s{padding:110px 0;background:var(--creme)}
+        #page-kuriosity .kq-lgrid{display:grid;gap:44px;align-items:center}
+        @media(min-width:960px){#page-kuriosity .kq-lgrid{grid-template-columns:.7fr 1.3fr}}
+        #page-kuriosity .kq-lgrid h2{font-family:'Special Elite';font-weight:400;font-size:clamp(34px,4.4vw,54px);line-height:1.05;margin:12px 0}
+        #page-kuriosity .kq-lgrid p{font-size:17px;line-height:1.6;color:#6b5440}
+        #page-kuriosity .kq-zoom{position:relative;background:#fff;padding:12px;box-shadow:0 40px 80px -40px rgba(61,44,32,.8);cursor:none}
+        #page-kuriosity .kq-lens{position:absolute;width:200px;height:200px;border-radius:50%;border:6px solid var(--brun);box-shadow:0 0 0 3px var(--or),0 20px 40px rgba(0,0,0,.45);background-repeat:no-repeat;pointer-events:none;opacity:0;transition:opacity .2s;transform:translate(-50%,-50%)}
+        #page-kuriosity .kq-zoom:hover .kq-lens{opacity:1}
+        #page-kuriosity .kq-hintl{font-family:'Courier Prime';font-size:13px;color:#8a6f52;margin-top:16px}
+        @media(hover:none){#page-kuriosity .kq-hintl{display:none}#page-kuriosity .kq-zoom{cursor:auto}}
+        #page-kuriosity .kq-typeb{display:flex;flex-wrap:wrap;gap:30px;align-items:baseline;margin-top:30px;padding-top:24px;border-top:1px dashed #c9b593}
+        #page-kuriosity .kq-typeb div{font-family:'Special Elite';font-size:34px}
+        #page-kuriosity .kq-typeb small{font-family:'Courier Prime';font-size:13px;color:#8a6f52}
+        @media (prefers-reduced-motion: reduce) { #page-kuriosity .kq-up, #page-kuriosity .kq-slam { opacity: 1; translate: none; scale: none; transition: none; } #page-kuriosity .kq-car { animation: none; } }
+        #page-kuriosity .kq-endw { background:#fff; color:#171717; padding-top:1rem; }
+        #page-kuriosity .kq-btn { border:0; cursor:pointer; }
+        #page-kuriosity .kq-nav2 { flex-wrap: wrap; gap: 10px; }
+        @media (max-width: 959px) { #page-kuriosity .kq-it .kq-note { background: transparent; box-shadow: none; padding: 10px 2px 2px; } }
         /* Cartes développement */
         .dev-card {
             cursor: pointer;
@@ -1396,80 +1520,75 @@
         </div>
     </div>
 
-    <div id="page-kuriosity" class="page cs-page bh-page relative z-10" style="--c50:#f5efe6;--c100:#ede1cc;--c200:#d9c4a0;--c500:#a8864f;--c700:#624332;--c800:#3d2c20">
-        <div class="max-w-6xl mx-auto px-6 pt-10">
-            <div class="flex flex-wrap gap-3 justify-between items-center mb-16">
-                <button onclick="showPage('home')" class="cs-btn"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button>
-                <button onclick="showProject('noor')" class="cs-btn cs-btn-dark">Projet suivant <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-            <div class="bh-head">
-                <span class="cs-tag">Refonte de site · Identité visuelle</span>
-                <h1 class="bh-title">Kuriosity Club</h1>
-                <p class="bh-subtitle">La refonte du site d'un escape game, pensée comme un dossier d'enquête.</p>
-            </div>
-        </div>
-
-        <div class="bh-wide" data-cs-section>
-            <figure class="bh-shot zoomable img-slot opt" data-label="Kuriosity Club" data-caption="Kuriosity Club"><img src="assets/kuriosity-mockup-m1.jpg" alt="Pages du site Kuriosity Club sur ordinateur" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure>
-        </div>
-
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="bh-intro" data-cs-section>
-                <div>
-                    <p class="bh-label">Le projet</p>
-                    <p class="bh-text">Kuriosity Club propose des missions d'escape game à Troyes. La refonte devait plonger le visiteur dans l'univers du lieu dès la page d'accueil, tout en rendant les informations pratiques et la réservation faciles à trouver.</p>
-                    <p class="bh-question">Comment créer une ambiance immersive sans perdre en clarté ?</p>
-                </div>
-                <dl class="bh-meta">
-                    <div><dt>Support</dt><dd>Site web desktop</dd></div>
-                    <div><dt>Outil</dt><dd>Figma</dd></div>
-                    <div><dt>Livrables</dt><dd>Identité, arborescence, maquettes, prototype</dd></div>
-                    <div><dt>Équipe</dt><dd>3 personnes</dd></div>
-                </dl>
-            </div>
-        </div>
-
-        <div class="bh-wide bh-stack">
-            <section class="bh-block" data-cs-section>
-                <div class="bh-caption"><span class="bh-num">01</span><h2>Arborescence</h2><p>Quatre pages : l'accueil, une page par mission, la réservation et le contact.</p></div>
-                <div class="bh-panel bh-panel-center"><figure class="bh-shot zoomable img-slot opt bh-natural" data-label="Arborescence" data-caption="Arborescence"><img src="assets/kuriosity-arborescence.jpg" alt="Arborescence du site" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></div>
-            </section>
-
-            <section class="bh-block" data-cs-section>
-                <div class="bh-caption"><span class="bh-num">02</span><h2>Les pages</h2><p>Papier vieilli, bords déchirés et machine à écrire : chaque page reprend les codes d'un dossier d'enquête.</p></div>
-                <figure class="bh-shot zoomable img-slot opt" data-label="Pages Accueil, Contact et Réservation" data-caption="Pages Accueil, Contact et Réservation"><img src="assets/kuriosity-mockup-m2.jpg" alt="Pages Accueil, Contact et Réservation" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure>
-            </section>
-
-            <section class="bh-block" data-cs-section>
-                <div class="bh-caption"><span class="bh-num">03</span><h2>Une page par mission</h2><p>Le scénario est présenté comme une pièce à conviction, avec une illustration rétro et un bouton pour réserver.</p></div>
-                <div class="bh-panel bh-panel-center bh-panel-res"><figure class="bh-shot zoomable img-slot opt bh-framed bh-natural" data-label="Mission K" data-caption="Page Mission K"><img src="assets/kuriosity-mission.jpg" alt="Page Mission K : scénario sur papier vieilli et illustration de fusée" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></div>
-            </section>
+    <div id="page-kuriosity" class="page cs-page relative z-10">
+<header class="kq-hero kq-grain"><div class="kq-wrap">
+  <div class="kq-nav2"><button onclick="showPage('home')" class="kq-btn"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button><button onclick="showProject('noor')" class="kq-btn kq-o">Projet suivant <i class="fa-solid fa-arrow-right"></i></button></div>
+  <div class="kq-hgrid">
+    <div>
+      <div class="kq-file">Dossier n°04 · Refonte de site · Identité visuelle</div>
+      <h1 id="kq-tt" data-text="Kuriosity Club">Kuriosity Club<span class="kq-car" aria-hidden="true"></span></h1>
+      <p class="kq-sub">La refonte du site d'un escape game, pensée comme un dossier d'enquête.</p>
+      <span class="kq-stamp kq-slam">Affaire résolue</span>
+    </div>
+    <div class="kq-folder kq-up"><span class="kq-clip"></span><img src="assets/kuriosity-mockup-m1.jpg" alt="Site Kuriosity Club sur ordinateur"></div>
+  </div>
+</div><div class="kq-hero-edge"></div></header>
 
 
-            <section class="bh-block" data-cs-section>
-                <div class="bh-caption"><span class="bh-num">04</span><h2>Identité visuelle</h2><p>Une horloge romaine et un K pour la curiosité, des bruns et un or patiné pour l'ambiance.</p></div>
-                <div class="bh-identity">
-                    <figure class="bh-logo zoomable img-slot opt" data-label="Logo" data-caption="Logo Kuriosity Club"><img src="assets/kuriosity-logo.jpg" alt="Logo Kuriosity Club : une horloge romaine et un K" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure>
-                    <div class="bh-palette bh-palette-col">
-                        <div style="background:#3D2C20;color:#f5efe6"><span>Brun profond</span><b>#3D2C20</b></div>
-                        <div style="background:#624332;color:#f5efe6"><span>Brun boutons</span><b>#624332</b></div>
-                        <div style="background:#C1A264;color:#2a1e16"><span>Or patiné</span><b>#C1A264</b></div>
-                        <div style="background:#F5EFE6;color:#2a1e16"><span>Blanc cassé</span><b>#F5EFE6</b></div>
-                    </div>
-                    <div class="bh-type"><p class="bh-label">Typographie</p><p class="bh-type-name">Elegant Typewriter</p><p class="bh-type-sample">Regular · Bold<br>1234567890</p></div>
-                </div>
-            </section>
-        </div>
+<section class="kq-open"><div class="kq-wrap">
+  <div class="kq-spread kq-up">
+    <div class="kq-pg">
+      <h3>Rapport · Le projet</h3>
+      <p>Kuriosity Club propose des missions d'escape game à Troyes. La refonte devait plonger le visiteur dans l'univers du lieu dès la page d'accueil, tout en rendant les informations pratiques et la réservation faciles à trouver.</p>
+      <p class="kq-q">Comment créer une ambiance immersive sans perdre en clarté ?</p>
+      <span class="kq-num">p. 1</span>
+    </div>
+    <div class="kq-pg">
+      <h3>Fiche technique</h3>
+      <div class="kq-form">
+        <div><small>Support</small><span>Site web desktop</span></div>
+        <div><small>Outil</small><span>Figma</span></div>
+        <div><small>Livrables</small><span>Identité, arborescence, maquettes, prototype</span></div>
+        <div><small>Équipe</small><span>3 personnes</span></div>
+        <div class="kq-st kq-slam">Classé</div>
+      </div>
+      <span class="kq-num">p. 2</span>
+    </div>
+  </div>
+</div></section>
 
-        <div class="max-w-6xl mx-auto px-6 pb-24">
+<section class="kq-wall"><div class="kq-wrap">
+  <div class="kq-intro-w"><h2>Le mur d'enquête</h2><p>Toutes les pièces du projet, reliées entre elles : de la structure du site à son identité.</p></div>
+  <div class="kq-board" id="kq-board">
+    <svg class="kq-strings" id="kq-strings"></svg>
+    <div class="kq-it kq-a1 kq-up"><span class="kq-pin"></span><img src="assets/kuriosity-arborescence.jpg" alt="Arborescence du site"><span class="kq-note"><b>Pièce n°1 · Arborescence</b>Quatre pages : accueil, mission, réservation, contact.</span></div>
+    <div class="kq-it kq-a2 kq-up"><span class="kq-pin"></span><img src="assets/kuriosity-mockup-m2.jpg" alt="Pages Accueil, Contact et Réservation"><span class="kq-note"><b>Pièce n°2 · Les pages</b>Papier vieilli, bords déchirés et machine à écrire.</span></div>
+    <div class="kq-it kq-a3 kq-up"><span class="kq-pin"></span><img src="assets/kuriosity-mockup-m1.jpg" alt="Site Kuriosity Club sur ordinateur"><span class="kq-note"><b>Pièce n°3 · L'ambiance</b>Le lieu en plein écran dès l'accueil.</span></div>
+    <div class="kq-it kq-a4 kq-paper2 kq-up"><span class="kq-pin"></span><img src="assets/kuriosity-logo.jpg" alt="Logo Kuriosity Club"><span class="kq-note"><b>Pièce n°4 · Le logo</b>Une horloge romaine et un K pour la curiosité.</span></div>
+    <div class="kq-it kq-a5 kq-up"><span class="kq-pin"></span><div class="kq-chipsw"><i style="background:#3D2C20"></i><i style="background:#624332"></i><i style="background:#C1A264"></i><i style="background:#F5EFE6;outline:1px solid #e6dccb"></i></div><span class="kq-note"><b>Pièce n°5 · Les couleurs</b>Bruns profonds et or patiné : #3D2C20, #624332, #C1A264, #F5EFE6.</span></div>
+  </div>
+</div></section>
 
+<section class="kq-loupe-s"><div class="kq-wrap kq-lgrid">
+  <div>
+    <span class="kq-tab">Pièce à conviction</span>
+    <h2>Une page par mission</h2>
+    <p>Le scénario est tapé à la machine sur papier vieilli, avec une illustration rétro et un seul bouton pour réserver.</p>
+    <div class="kq-typeb"><div>Elegant Typewriter</div><small>Typographie du site</small></div>
+  </div>
+  <div>
+    <div class="kq-zoom kq-up" id="kq-zoom"><img src="assets/kuriosity-mission.jpg" alt="Page Mission K"><span class="kq-lens" id="kq-lens"></span></div>
+    <p class="kq-hintl">Passe la loupe sur la page pour l'examiner.</p>
+  </div>
+</div></section>
+
+        <div class="kq-endw"><div class="max-w-6xl mx-auto px-6 pb-24">
             <button onclick="showProject('noor')" class="bh-next" data-cs-section>
                 <span class="bh-label">Projet suivant</span>
                 <span class="bh-next-title">Noor <i class="fa-solid fa-arrow-right"></i></span>
             </button>
-        </div>
+        </div></div>
     </div>
-
     <div id="page-noor" class="page cs-page relative z-10" style="--c50:#fdf2f8;--c100:#fce7f3;--c200:#fbcfe8;--c500:#ec4899;--c700:#be185d;--c800:#9d174d">
         <div class="max-w-6xl mx-auto px-6 pt-10 pb-24">
             <div class="flex flex-wrap gap-3 justify-between items-center mb-14">
@@ -2061,12 +2180,45 @@
     </script>
     <script>
         (function () {
-            var els = document.querySelectorAll('.ppc-drop, .ppc-up, .gde-up');
+            var els = document.querySelectorAll('.ppc-drop, .ppc-up, .gde-up, .kq-up, .kq-slam');
             if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
             var io = new IntersectionObserver(function (es) {
                 es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
             }, { threshold: .15 });
             els.forEach(function (el, i) { el.style.transitionDelay = (i % 4) * 90 + 'ms'; io.observe(el); });
+        })();
+    </script>
+    <script>
+        (function () {
+            var pg = document.getElementById('page-kuriosity'); if (!pg) return;
+            var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var tt = document.getElementById('kq-tt'), typed = false;
+            function type() {
+                if (typed || reduce) return; typed = true;
+                var txt = tt.getAttribute('data-text'), node = tt.firstChild, k = 0; node.textContent = '';
+                var iv = setInterval(function () { node.textContent = txt.slice(0, ++k); if (k >= txt.length) clearInterval(iv); }, 80);
+            }
+            function strings() {
+                var b = document.getElementById('kq-board'), sv = document.getElementById('kq-strings');
+                if (!b || getComputedStyle(sv).display === 'none' || !b.offsetParent) return;
+                var r = b.getBoundingClientRect();
+                var p = [].map.call(b.querySelectorAll('.kq-pin'), function (x) { var q = x.getBoundingClientRect(); return [q.left - r.left + q.width / 2, q.top - r.top + q.height / 2]; });
+                sv.setAttribute('viewBox', '0 0 ' + r.width + ' ' + r.height);
+                sv.innerHTML = [[0,1],[0,2],[1,3],[2,3],[3,4]].map(function (a) { return '<line x1="' + p[a[0]][0] + '" y1="' + p[a[0]][1] + '" x2="' + p[a[1]][0] + '" y2="' + p[a[1]][1] + '"/>'; }).join('');
+            }
+            if ('IntersectionObserver' in window) {
+                new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) type(); }); }).observe(tt);
+                new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { strings(); setTimeout(strings, 900); } }); }).observe(document.getElementById('kq-board'));
+            }
+            addEventListener('resize', strings);
+            var z = document.getElementById('kq-zoom'), l = document.getElementById('kq-lens'), im = z.querySelector('img');
+            z.addEventListener('mousemove', function (e) {
+                var r = z.getBoundingClientRect(), ir = im.getBoundingClientRect(), f = 2.2;
+                l.style.left = (e.clientX - r.left) + 'px'; l.style.top = (e.clientY - r.top) + 'px';
+                l.style.backgroundImage = 'url(' + im.src + ')';
+                l.style.backgroundSize = (ir.width * f) + 'px ' + (ir.height * f) + 'px';
+                l.style.backgroundPosition = (-(e.clientX - ir.left) * f + 94) + 'px ' + (-(e.clientY - ir.top) * f + 94) + 'px';
+            });
         })();
     </script>
 </body>
