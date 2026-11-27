@@ -177,7 +177,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..900,0..100,0..1;1,9..144,400..900,0..100,0..1&family=Inter:wght@300;400;500;600&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
@@ -543,6 +543,82 @@
         .bh-logo.img-slot { border: 1px solid #ede1cc; border-radius: 1.5rem; aspect-ratio: 1; background: #f5efe6; }
         .bh-logo.img-slot > img { object-fit: contain; object-position: center; padding: 8%; }
         .bh-identity .bh-palette.bh-palette-col > div { aspect-ratio: auto; min-height: 7.5rem; }
+        /* Plan Poitrines : style collage */
+        .ppc { --pv:#6E3FAB; --pvd:#4c2580; --prc:#FFDDF6; --pr:#FCB7EE; --pj:#FFFEA1; --pb:#3939FF; --po:#FD5806; --pcr:#fffaf3; background: var(--prc) !important; color: #2a1640; overflow-x: clip; }
+        .ppc img { display: block; max-width: 100%; }
+        .ppc .ppc-serif { font-family: 'Fraunces', serif; font-variation-settings: "SOFT" 100, "WONK" 1; }
+        .ppc-wrap { display: block; max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+        .ppc-hero { background: var(--pv); color: var(--pcr); padding: 40px 0 110px; position: relative; overflow: hidden; }
+        .ppc-nav { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: space-between; margin-bottom: 70px; position: relative; z-index: 2; }
+        .ppc .ppc-btn-y { background: var(--pj); border-color: var(--pj); color: var(--pvd); }
+        .ppc-hero-grid { display: grid; gap: 56px; align-items: center; position: relative; }
+        @media (min-width: 960px) { .ppc-hero-grid { grid-template-columns: 1fr 1.1fr; } }
+        .ppc-tag { display: inline-block; background: var(--pj); color: var(--pvd); font-weight: 700; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; padding: 9px 16px; transform: rotate(-3deg); box-shadow: 4px 4px 0 var(--pvd); }
+        .ppc-hero h1 { font-size: clamp(64px, 10vw, 132px); line-height: .88; font-weight: 800; margin: 28px 0 26px; letter-spacing: -.02em; }
+        .ppc-hero h1 em { color: var(--pr); font-style: italic; font-weight: 600; display: block; margin-left: .35em; }
+        .ppc .ppc-sub { font-size: 19px !important; line-height: 1.55; max-width: 430px; color: #f1e6ff; }
+        .ppc-polaroid { background: var(--pcr); padding: 14px 14px 50px; transform: rotate(3deg); box-shadow: 0 40px 70px -30px rgba(20,0,50,.7); position: relative; }
+        .ppc-cap { position: absolute; bottom: 14px; left: 18px; font-family: 'Fraunces', serif; font-style: italic; color: var(--pv); font-size: 18px; }
+        .ppc-tape { position: absolute; z-index: 2; width: 120px; height: 32px; background: rgba(255,254,161,.78); top: -14px; left: 50%; transform: translateX(-50%) rotate(-4deg); box-shadow: 0 2px 4px rgba(0,0,0,.08); }
+        .ppc-star { position: absolute; fill: var(--pj); pointer-events: none; }
+        .ppc-blob { position: absolute; width: 420px; height: 420px; border-radius: 50%; background: #8c55cf; left: -160px; bottom: -200px; }
+        .ppc-intro { padding: 100px 0 90px; }
+        .ppc-intro-grid { display: grid; gap: 56px; }
+        @media (min-width: 960px) { .ppc-intro-grid { grid-template-columns: 1.2fr 1fr; align-items: center; } }
+        .ppc-kicker { font-weight: 700; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--pv); margin-bottom: 16px; }
+        .ppc .ppc-txt { font-size: 18px !important; line-height: 1.7; }
+        .ppc .ppc-q { font-size: clamp(26px, 3vw, 36px) !important; line-height: 1.2; font-style: italic; font-weight: 500; color: var(--pvd); margin-top: 34px; }
+        .ppc-labels { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .ppc-lab { padding: 20px 20px 22px; box-shadow: 5px 6px 0 rgba(76,37,128,.9); border-radius: 4px; transform: rotate(var(--r, 0deg)); }
+        .ppc-lab small { display: block; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; opacity: .75; margin-bottom: 6px; }
+        .ppc-lab span { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 600; line-height: 1.25; }
+        .ppc-s { padding: 110px 0; position: relative; overflow: hidden; }
+        .ppc-head { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 14px 28px; margin-bottom: 56px; }
+        .ppc-num { background: var(--po); color: #fff; font-family: 'Fraunces', serif; font-weight: 800; font-size: 26px; padding: 6px 14px; transform: rotate(-6deg); box-shadow: 4px 4px 0 var(--pvd); }
+        .ppc-head h2 { font-size: clamp(38px, 5vw, 64px); font-weight: 700; line-height: 1; color: var(--pvd); }
+        .ppc .ppc-head p { flex-basis: 100%; font-size: 17px !important; line-height: 1.6; max-width: 560px; }
+        @media (min-width: 960px) { .ppc .ppc-head p { flex-basis: auto; margin-left: auto; max-width: 400px; } }
+        .ppc-dark { background: var(--pv); color: var(--pcr); }
+        .ppc-dark .ppc-head h2 { color: var(--pcr); }
+        .ppc-dark .ppc-num { background: var(--pj); color: var(--pvd); }
+        .ppc-cream { background: var(--pcr); background-image: radial-gradient(#e9d6f3 1.2px, transparent 1.2px); background-size: 22px 22px; }
+        .ppc-yellow { background: var(--pj); }
+        .ppc-paper { background: #fff; padding: 12px; box-shadow: 0 30px 60px -30px rgba(60,20,100,.55); position: relative; transform: rotate(var(--r, 0deg)); }
+        .ppc-arbo { max-width: 440px; margin: 0 auto; }
+        .ppc-wire { max-width: 900px; margin: 0 auto; }
+        .ppc-wrapped { max-width: 820px; margin: 0 auto; }
+        .ppc-sheets { display: flex; justify-content: center; align-items: flex-start; padding: 10px 0 20px; }
+        .ppc-sheet { width: 34%; max-width: 380px; height: 620px; overflow: hidden; background: #fff; box-shadow: 0 40px 70px -30px rgba(10,0,30,.8); border: 6px solid #fff; transition: transform .4s; position: relative; }
+        .ppc-sheet img { width: 100%; }
+        .ppc-sheet:nth-child(1) { transform: rotate(-5deg) translateY(30px); margin-right: -30px; }
+        .ppc-sheet:nth-child(2) { transform: rotate(1deg); z-index: 2; }
+        .ppc-sheet:nth-child(3) { transform: rotate(5deg) translateY(40px); margin-left: -30px; }
+        @media (hover: hover) { .ppc-sheet:hover { transform: rotate(0) translateY(-10px) scale(1.03); z-index: 3; } }
+        .ppc-video { max-width: 1000px; margin: 0 auto; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 12px 14px 0 var(--pv); border: 3px solid var(--pvd); transform: rotate(var(--r, 0deg)); }
+        .ppc-bar { height: 34px; background: var(--pr); display: flex; align-items: center; gap: 7px; padding: 0 14px; border-bottom: 3px solid var(--pvd); }
+        .ppc-bar span { width: 11px; height: 11px; border-radius: 50%; border: 2px solid var(--pvd); }
+        .ppc-video video { display: block; width: 100%; height: auto; }
+        .ppc-live { position: absolute; right: 8%; top: 120px; background: var(--pb); color: #fff; font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; padding: 10px 16px; transform: rotate(8deg); box-shadow: 4px 4px 0 var(--pvd); z-index: 3; }
+        .ppc-strips { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 820px; margin: 0 auto; }
+        .ppc-strip { padding: 26px 24px; display: flex; justify-content: space-between; align-items: baseline; box-shadow: 5px 6px 0 rgba(76,37,128,.9); border-radius: 4px; transform: rotate(var(--r, 0deg)); }
+        .ppc-strip span { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 600; }
+        .ppc-strip code { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; opacity: .8; }
+        .ppc-next { display: block; width: 100%; text-align: left; background: var(--pvd); color: var(--pcr); padding: 90px 0; cursor: pointer; border: 0; }
+        .ppc-next small { display: block; font-weight: 700; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--pr); }
+        .ppc-next-title { display: inline-flex; gap: 1.5rem; font-size: clamp(54px, 8vw, 104px); font-weight: 800; margin-top: 10px; line-height: 1; transition: gap .3s; }
+        .ppc-next-title i { font-style: normal; color: var(--pj); }
+        .ppc-next:hover .ppc-next-title { gap: 2.5rem; }
+        .ppc-drop { opacity: 0; translate: 0 -40px; rotate: 6deg; transition: opacity .6s, translate .8s cubic-bezier(.2,1.6,.4,1), rotate .8s cubic-bezier(.2,1.6,.4,1); }
+        .ppc-drop.in { opacity: 1; translate: 0 0; rotate: 0deg; }
+        @media (prefers-reduced-motion: reduce) { .ppc-drop { opacity: 1; translate: none; rotate: none; transition: none; } }
+        @media (max-width: 700px) {
+            .ppc-sheets { flex-direction: column; align-items: center; }
+            .ppc-sheet { width: 82%; height: 420px; margin: 0 !important; }
+            .ppc-sheet:nth-child(n+2) { margin-top: -60px !important; }
+            .ppc-strips { grid-template-columns: 1fr; }
+            .ppc-live { top: 60px; }
+            .ppc-s { padding: 80px 0; }
+        }
         /* Cartes développement */
         .dev-card {
             cursor: pointer;
@@ -697,7 +773,7 @@
                 <article class="group grid lg:grid-cols-12 gap-8 lg:gap-12 items-center cursor-pointer" onclick="showProject('planpoitrines-maquette')">
                     <div class="lg:col-span-7">
                         <figure class="img-slot case-cover aspect-[16/10] border-purple-200 bg-purple-50" data-label="Visuel projet — 1600×1000">
-                            <img src="assets/planpoitrines-maquette.png" alt="Maquette Figma du site Plan Poitrines" onload="slotLoaded(this)" onerror="slotMissing(this)">
+                            <img src="assets/planpoitrines-mockup-m1.jpg" alt="Site Plan Poitrines sur ordinateur" onload="slotLoaded(this)" onerror="slotMissing(this)">
                         </figure>
                     </div>
                     <div class="lg:col-span-5">
@@ -1330,42 +1406,87 @@
         </div>
     </div>
 
-    <div id="page-planpoitrines-maquette" class="page cs-page relative z-10" style="--c50:#faf5ff;--c100:#f3e8ff;--c200:#e9d5ff;--c500:#a855f7;--c700:#7e22ce;--c800:#6b21a8">
-        <div class="max-w-6xl mx-auto px-6 pt-10 pb-24">
-            <div class="flex flex-wrap gap-3 justify-between items-center mb-14">
-                <button onclick="showPage('home')" class="cs-btn"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button>
-                <div class="flex flex-wrap gap-3"><button onclick="showProject('gardeco')" class="cs-btn cs-btn-dark">Projet suivant <i class="fa-solid fa-arrow-right"></i></button></div>
-            </div>
-
-            <span class="cs-tag">Site associatif</span>
-            <h1 class="cs-h1">Plan Poitrines</h1>
-            <p class="cs-subtitle">Le site vitrine d&#x27;un collectif audiovisuel inclusif.</p>
-            <figure class="img-slot opt zoomable aspect-[16/8] cs-cover" data-label="Visuel de couverture" data-caption="Plan Poitrines"><img src="assets/planpoitrines-maquette.png" alt="Plan Poitrines" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure>
-            <div class="cs-meta"><div><p class="cs-meta-k">Rôle</p><p class="cs-meta-v">UX/UI designer</p></div><div><p class="cs-meta-k">Durée</p><p class="cs-meta-v">8 semaines · 2025</p></div><div><p class="cs-meta-k">Outil</p><p class="cs-meta-v">Figma</p></div><div><p class="cs-meta-k">Équipe</p><p class="cs-meta-v">Deux co-présidentes</p></div></div>
-
-            <div class="flex flex-wrap gap-12 lg:gap-16 items-start">
-                <nav aria-label="Sommaire" class="cs-nav">
-                    <p class="cs-meta-k mb-4">Sommaire</p>
-                    <a href="#planpoitrines-maquette-contexte" data-cs-target="planpoitrines-maquette-contexte" onclick="csScroll(event, 'planpoitrines-maquette-contexte')"><span class="cs-nav-num">01</span> Contexte</a><a href="#planpoitrines-maquette-probleme" data-cs-target="planpoitrines-maquette-probleme" onclick="csScroll(event, 'planpoitrines-maquette-probleme')"><span class="cs-nav-num">02</span> Problème</a><a href="#planpoitrines-maquette-processus" data-cs-target="planpoitrines-maquette-processus" onclick="csScroll(event, 'planpoitrines-maquette-processus')"><span class="cs-nav-num">03</span> Processus</a><a href="#planpoitrines-maquette-wireframes" data-cs-target="planpoitrines-maquette-wireframes" onclick="csScroll(event, 'planpoitrines-maquette-wireframes')"><span class="cs-nav-num">04</span> Wireframes</a><a href="#planpoitrines-maquette-interface" data-cs-target="planpoitrines-maquette-interface" onclick="csScroll(event, 'planpoitrines-maquette-interface')"><span class="cs-nav-num">05</span> Maquette</a><a href="#planpoitrines-maquette-mockups" data-cs-target="planpoitrines-maquette-mockups" onclick="csScroll(event, 'planpoitrines-maquette-mockups')"><span class="cs-nav-num">06</span> Mockups</a><a href="#planpoitrines-maquette-details" data-cs-target="planpoitrines-maquette-details" onclick="csScroll(event, 'planpoitrines-maquette-details')"><span class="cs-nav-num">07</span> Détails</a><a href="#planpoitrines-maquette-bilan" data-cs-target="planpoitrines-maquette-bilan" onclick="csScroll(event, 'planpoitrines-maquette-bilan')"><span class="cs-nav-num">08</span> Bilan</a>
-                </nav>
-                <div class="cs-body">
-<section id="planpoitrines-maquette-contexte" data-cs-section class="cs-section"><p class="cs-num">01</p><h2 class="cs-h2">Contexte</h2><p class="cs-lead">Un collectif de jeunes cinéastes en plein changement de nom et d&#x27;identité visuelle. Mission : concevoir son site vitrine avant le développement.</p><div class="cs-chips"><span class="cs-chip">Féministe, queer, inclusif</span><span class="cs-chip">Identité en refonte</span><span class="cs-chip">Validation collective</span></div></section>
-<section id="planpoitrines-maquette-probleme" data-cs-section class="cs-section cs-problem-box"><p class="cs-num-line"><span class="cs-num">02</span> · Problème</p><p class="cs-problem">Comment concevoir le site d&#x27;une association dont la charte graphique est encore en construction ?</p></section>
-<section id="planpoitrines-maquette-processus" data-cs-section data-cs-media class="cs-section"><p class="cs-num">03</p><h2 class="cs-h2">Processus</h2><div class="cs-grid-2"><figure class="cs-fig"><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Arborescence" data-caption="Arborescence"><img src="assets/planpoitrines-arborescence.png" alt="Arborescence" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figcaption class="cs-caption"><strong>Arborescence</strong><span>4 pages, pensées pour 3 types de visiteurs.</span></figcaption></figure><figure class="cs-fig"><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Wireframes" data-caption="Wireframes"><img src="assets/planpoitrines-wireframe1.png" alt="Wireframes" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figcaption class="cs-caption"><strong>Wireframes</strong><span>La hiérarchie fixée avant les couleurs.</span></figcaption></figure></div></section>
-<section id="planpoitrines-maquette-wireframes" data-cs-section data-cs-media class="cs-section"><p class="cs-num">04</p><h2 class="cs-h2">Wireframes</h2><p class="cs-lead">Chaque page, écran par écran.</p><div class="cs-grid-3"><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Wireframe 1" data-caption="Wireframe 1"><img src="assets/planpoitrines-wireframe1.png" alt="Wireframe 1" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Wireframe 2" data-caption="Wireframe 2"><img src="assets/planpoitrines-wireframe2.png" alt="Wireframe 2" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Wireframe mobile" data-caption="Wireframe mobile"><img src="assets/planpoitrines-maquette-wireframe-mobile.png" alt="Wireframe mobile" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></div></section>
-<section id="planpoitrines-maquette-interface" data-cs-section data-cs-media class="cs-section"><p class="cs-num">05</p><h2 class="cs-h2">Maquette</h2><p class="cs-lead">Partagée sur Figma pour que l&#x27;équipe commente directement les écrans.</p><figure class="img-slot opt zoomable aspect-[16/10]" data-label="Maquette" data-caption="Maquette"><img src="assets/planpoitrines-maquette.png" alt="Maquette" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></section>
-<section id="planpoitrines-maquette-mockups" data-cs-section data-cs-media class="cs-section"><p class="cs-num">06</p><h2 class="cs-h2">Mockups</h2><p class="cs-lead">Le projet en situation, sur ordinateur et sur mobile.</p><figure class="img-slot opt zoomable aspect-[16/10] mb-4" data-label="Mockup desktop" data-caption="Mockup desktop"><img src="assets/planpoitrines-maquette-mockup-desktop.png" alt="Mockup desktop" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><div class="cs-grid-3"><figure class="img-slot opt zoomable aspect-[9/16] cs-phone" data-label="Mockup mobile 1" data-caption="Mockup mobile 1"><img src="assets/planpoitrines-maquette-mockup-mobile-1.png" alt="Mockup mobile 1" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figure class="img-slot opt zoomable aspect-[9/16] cs-phone" data-label="Mockup mobile 2" data-caption="Mockup mobile 2"><img src="assets/planpoitrines-maquette-mockup-mobile-2.png" alt="Mockup mobile 2" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figure class="img-slot opt zoomable aspect-[9/16] cs-phone" data-label="Mockup mobile 3" data-caption="Mockup mobile 3"><img src="assets/planpoitrines-maquette-mockup-mobile-3.png" alt="Mockup mobile 3" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></div></section>
-<section id="planpoitrines-maquette-details" data-cs-section data-cs-media class="cs-section"><p class="cs-num">07</p><h2 class="cs-h2">Détails</h2><p class="cs-lead">Zoom sur les choix d'interface.</p><div class="cs-grid-2"><figure class="cs-fig"><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Détail 1" data-caption="Détail 1"><img src="assets/planpoitrines-maquette-detail-1.png" alt="Détail 1" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></figure><figure class="cs-fig"><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Détail 2" data-caption="Détail 2"><img src="assets/planpoitrines-maquette-detail-2.png" alt="Détail 2" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></figure></div></section>
-<section id="planpoitrines-maquette-bilan" data-cs-section class="cs-section"><p class="cs-num">08</p><h2 class="cs-h2">Bilan</h2><div class="cs-grid-2"><div class="cs-card"><p class="cs-card-label">Difficulté</p><p>Designer sans charte graphique finalisée.</p></div><div class="cs-card"><p class="cs-card-label">Ce que j&#x27;en retiens</p><p>Valider étape par étape plutôt qu&#x27;attendre que tout soit figé.</p></div></div></section>
+    <div id="page-planpoitrines-maquette" class="page cs-page ppc relative z-10">
+        <header class="ppc-hero">
+            <svg class="ppc-star" style="width:90px;right:6%;top:110px" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0l12 36 38 2-30 22 11 38-31-22-31 22 11-38L0 38l38-2z"/></svg>
+            <svg class="ppc-star" style="width:46px;right:14%;top:190px;transform:rotate(18deg);fill:#FCB7EE" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0l12 36 38 2-30 22 11 38-31-22-31 22 11-38L0 38l38-2z"/></svg>
+            <div class="ppc-blob"></div>
+            <div class="ppc-wrap">
+                <div class="ppc-nav">
+                    <button onclick="showPage('home')" class="cs-btn"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button>
+                    <button onclick="showProject('gardeco')" class="cs-btn ppc-btn-y">Projet suivant <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="ppc-hero-grid">
+                    <div>
+                        <span class="ppc-tag">Site associatif · UX/UI et intégration</span>
+                        <h1 class="ppc-serif">Plan<em>Poitrines</em></h1>
+                        <p class="ppc-sub">Le site vitrine d'un collectif de jeunes cinéastes, de l'arborescence au site en ligne.</p>
+                    </div>
+                    <div class="ppc-polaroid ppc-drop"><span class="ppc-tape"></span><img src="assets/planpoitrines-mockup-m1.jpg" alt="Pages du site Plan Poitrines sur ordinateur"><span class="ppc-cap">le site, version ordinateur</span></div>
                 </div>
             </div>
+        </header>
 
-            <div class="flex justify-center pt-16">
-                <button onclick="showProject('gardeco')" class="cs-btn cs-btn-dark cs-btn-lg">Projet suivant : Gard&#x27;Éco <i class="fa-solid fa-arrow-right"></i></button>
+        <div class="ppc-intro"><div class="ppc-wrap ppc-intro-grid">
+            <div>
+                <div class="ppc-kicker">Le projet</div>
+                <p class="ppc-txt">Plan Poitrines accompagne de jeunes cinéastes autour de valeurs féministes, queer et inclusives. Pendant mon stage, j'ai conçu puis intégré son site vitrine, alors que l'association changeait de nom et d'identité visuelle.</p>
+                <p class="ppc-q ppc-serif">« Comment concevoir le site d'une association dont la charte graphique est encore en construction ? »</p>
             </div>
-        </div>
-    </div>
+            <div class="ppc-labels">
+                <div class="ppc-lab ppc-drop" style="background:#3939FF;color:#fff;--r:-3deg"><small>Rôle</small><span>UX/UI designer et intégratrice</span></div>
+                <div class="ppc-lab ppc-drop" style="background:#FFFEA1;--r:2deg"><small>Durée</small><span>8 semaines · 2025</span></div>
+                <div class="ppc-lab ppc-drop" style="background:#FCB7EE;--r:1.5deg"><small>Outils</small><span>Figma, HTML, CSS</span></div>
+                <div class="ppc-lab ppc-drop" style="background:#FD5806;color:#fff;--r:-2deg"><small>Équipe</small><span>Avec les deux co-présidentes</span></div>
+            </div>
+        </div></div>
 
+        <section class="ppc-s ppc-cream"><div class="ppc-wrap">
+            <div class="ppc-head"><span class="ppc-num">01</span><h2 class="ppc-serif">Arborescence</h2><p>Quatre pages, pensées pour un membre, un partenaire et quelqu'un qui découvre l'association.</p></div>
+            <div class="ppc-paper ppc-arbo ppc-drop" style="--r:-2deg"><span class="ppc-tape"></span><img src="assets/planpoitrines-arborescence.jpg" alt="Arborescence dessinée à la main"></div>
+            <svg class="ppc-star" style="width:70px;right:12%;bottom:120px;fill:#FD5806" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0l12 36 38 2-30 22 11 38-31-22-31 22 11-38L0 38l38-2z"/></svg>
+        </div></section>
+
+        <section class="ppc-s"><div class="ppc-wrap">
+            <div class="ppc-head"><span class="ppc-num">02</span><h2 class="ppc-serif">Wireframes</h2><p>Dessinés à la main pour fixer la hiérarchie de chaque page avant de penser aux couleurs.</p></div>
+            <div class="ppc-paper ppc-wire ppc-drop" style="--r:-1.5deg"><span class="ppc-tape" style="background:rgba(252,183,238,.85)"></span><img src="assets/planpoitrines-wireframe1.jpg" alt="Wireframes des pages Accueil, Productions et Contact"></div>
+        </div></section>
+
+        <section class="ppc-s ppc-dark"><div class="ppc-wrap">
+            <div class="ppc-head"><span class="ppc-num">03</span><h2 class="ppc-serif">Les pages</h2><p>Un violet affirmé, des roses et des touches de jaune et d'orange, à l'image d'un collectif engagé et joyeux.</p></div>
+            <div class="ppc-sheets">
+                <div class="ppc-sheet ppc-drop"><img src="assets/planpoitrines-page-accueil.jpg" alt="Page d'accueil" loading="lazy"></div>
+                <div class="ppc-sheet ppc-drop"><img src="assets/planpoitrines-page-adhesion.jpg" alt="Page Adhésion" loading="lazy"></div>
+                <div class="ppc-sheet ppc-drop"><img src="assets/planpoitrines-page-contact.jpg" alt="Page Contact" loading="lazy"></div>
+            </div>
+        </div></section>
+
+        <section class="ppc-s ppc-yellow"><div class="ppc-wrap">
+            <div class="ppc-head"><span class="ppc-num" style="background:#3939FF">04</span><h2 class="ppc-serif">Une page d'accueil vivante</h2><p>Le bilan de l'année sous forme d'étiquettes colorées, dans l'esprit des rétrospectives annuelles des applications.</p></div>
+            <div class="ppc-paper ppc-wrapped ppc-drop" style="--r:1.5deg"><span class="ppc-tape" style="background:rgba(252,183,238,.85)"></span><img src="assets/planpoitrines-wrapped.jpg" alt="Bloc Wrapped 2024 de la page d'accueil" loading="lazy"></div>
+        </div></section>
+
+        <section class="ppc-s"><div class="ppc-wrap" style="position:relative">
+            <div class="ppc-head"><span class="ppc-num">05</span><h2 class="ppc-serif">Le site, une fois codé</h2><p>Après la maquette, j'ai codé le site moi-même en HTML et CSS. Voici le résultat en ligne.</p></div>
+            <span class="ppc-live">En ligne ✦</span>
+            <div class="ppc-video ppc-drop" style="--r:-1deg"><div class="ppc-bar"><span style="background:#FD5806"></span><span style="background:#FFFEA1"></span><span style="background:#fff"></span></div>
+                <video src="assets/planpoitrines-site.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        </div></section>
+
+        <section class="ppc-s ppc-cream"><div class="ppc-wrap">
+            <div class="ppc-head"><span class="ppc-num">06</span><h2 class="ppc-serif">Couleurs</h2><p>Une palette vive, choisie avec l'équipe pendant la refonte de l'identité.</p></div>
+            <div class="ppc-strips">
+                <div class="ppc-strip ppc-drop" style="background:#6E3FAB;color:#fff;--r:-2deg"><span>Violet</span><code>#6E3FAB</code></div>
+                <div class="ppc-strip ppc-drop" style="background:#FFDDF6;--r:1.5deg"><span>Rose clair</span><code>#FFDDF6</code></div>
+                <div class="ppc-strip ppc-drop" style="background:#FCB7EE;--r:2deg"><span>Rose</span><code>#FCB7EE</code></div>
+                <div class="ppc-strip ppc-drop" style="background:#FFFEA1;--r:-1.5deg"><span>Jaune</span><code>#FFFEA1</code></div>
+                <div class="ppc-strip ppc-drop" style="background:#3939FF;color:#fff;--r:-1deg"><span>Bleu</span><code>#3939FF</code></div>
+                <div class="ppc-strip ppc-drop" style="background:#FD5806;color:#fff;--r:2.5deg"><span>Orange</span><code>#FD5806</code></div>
+            </div>
+        </div></section>
+
+        <button class="ppc-next" onclick="showProject('gardeco')"><span class="ppc-wrap"><small>Projet suivant</small><span class="ppc-next-title ppc-serif">Gard'Éco <i>→</i></span></span></button>
+    </div>
     <div id="page-gardeco" class="page cs-page bh-page relative z-10" style="--c50:#f0fdf4;--c100:#dcfce7;--c200:#bbf7d0;--c500:#16a34a;--c700:#15803d;--c800:#166534">
         <div class="max-w-6xl mx-auto px-6 pt-10">
             <div class="flex flex-wrap gap-3 justify-between items-center mb-16">
@@ -1838,6 +1959,16 @@
             if (e.key === 'ArrowLeft' && !document.getElementById('lightbox').classList.contains('hidden')) prevLightboxImage();
             if (e.key === 'ArrowRight' && !document.getElementById('lightbox').classList.contains('hidden')) nextLightboxImage();
         });
+    </script>
+    <script>
+        (function () {
+            var els = document.querySelectorAll('.ppc-drop');
+            if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+            var io = new IntersectionObserver(function (es) {
+                es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+            }, { threshold: .15 });
+            els.forEach(function (el, i) { el.style.transitionDelay = (i % 4) * 90 + 'ms'; io.observe(el); });
+        })();
     </script>
 </body>
 </html>
