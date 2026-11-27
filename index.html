@@ -177,7 +177,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..900,0..100,0..1;1,9..144,400..900,0..100,0..1&family=Inter:wght@300;400;500;600&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..900,0..100,0..1;1,9..144,400..900,0..100,0..1&family=Inter:wght@300;400;500;600&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
@@ -624,6 +624,101 @@
         .ppc-up.in { opacity: 1; translate: 0 0; }
         @media (prefers-reduced-motion: reduce) { .ppc-up { opacity: 1; translate: none; transition: none; } .ppc-view img { transition: none; } }
         @media (max-width: 700px) { .ppc-view { height: 420px; } .ppc-s { padding: 80px 0; } .ppc-pal div { height: 140px; } }
+        /* Gard'Éco : style produit */
+        #page-gardeco { --forest:#03543F; --deep:#023a2c; --vif:#5ED368; --menthe:#59CD90; --fond:#F2FFF7; --txt:#202020; background:#fff; color:var(--txt); overflow-x:clip; }
+        #page-gardeco img { display:block; max-width:100%; }
+        #page-gardeco p { font-size: inherit; }
+        #page-gardeco .gde-wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+        #page-gardeco .gde-bri{font-family:'Bricolage Grotesque',sans-serif}
+        #page-gardeco /* téléphone */
+.gde-phone{width:250px;border-radius:38px;background:#0d0d0d;padding:9px;box-shadow:0 40px 70px -30px rgba(0,30,20,.65);flex:none}
+        #page-gardeco .gde-phone .gde-scr{border-radius:30px;overflow:hidden;background:#fff;position:relative}
+        #page-gardeco .gde-phone .gde-sb{height:30px;display:flex;justify-content:space-between;align-items:center;padding:0 20px 0 26px;font-size:11px;font-weight:600;color:#111;background:#fff}
+        #page-gardeco .gde-phone .gde-sb i{display:flex;gap:4px;align-items:center}
+        #page-gardeco .gde-phone .gde-sb i b{display:block;width:15px;height:8px;border-radius:2px;border:1.5px solid #111}
+        #page-gardeco .gde-phone .gde-sb i s{display:block;width:12px;height:8px;background:linear-gradient(90deg,#111 0 2px,transparent 2px 4px,#111 4px 6px,transparent 6px 8px,#111 8px 10px,transparent 10px)}
+        #page-gardeco .gde-phone .gde-notch{position:absolute;top:7px;left:50%;transform:translateX(-50%);width:76px;height:20px;border-radius:12px;background:#0d0d0d}
+        #page-gardeco .gde-phone .gde-view{height:470px;overflow:hidden}
+        #page-gardeco /* hero */
+.gde-hero{padding:28px 0 0}
+        #page-gardeco .gde-panel{background:var(--forest);border-radius:32px;color:#fff;position:relative;overflow:hidden;padding:64px 56px 0;display:grid;gap:40px}
+        @media(min-width:960px){#page-gardeco .gde-panel{grid-template-columns:1fr 1fr;align-items:end}}
+        #page-gardeco .gde-panel::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(94,211,104,.45),transparent 65%);right:-120px;top:-160px}
+        #page-gardeco .gde-nav2{display:flex;justify-content:space-between;margin-bottom:28px;grid-column:1/-1;position:relative}
+        #page-gardeco .gde-btn{border:0;cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:99px;font-family:'Outfit';font-weight:800;font-size:13px;background:#fff;color:#111}
+        #page-gardeco .gde-btn.gde-g{background:var(--vif);color:var(--deep)}
+        #page-gardeco .gde-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:99px;font-size:13px;font-weight:500}
+        #page-gardeco .gde-pill::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--vif)}
+        #page-gardeco .gde-panel h1{font-size:clamp(60px,8.5vw,116px);font-weight:800;letter-spacing:-.04em;line-height:.95;margin:22px 0 18px}
+        #page-gardeco .gde-panel h1 span{color:var(--vif)}
+        #page-gardeco .gde-panel p.gde-sub{font-size:19px;line-height:1.55;color:#cfeee0;max-width:440px}
+        #page-gardeco .gde-chips{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 64px}
+        #page-gardeco .gde-chips div{background:#fff;color:var(--forest);border-radius:16px;padding:12px 16px;min-width:120px}
+        #page-gardeco .gde-chips small{display:block;font-size:11px;color:#5b7d70;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+        #page-gardeco .gde-chips strong{font-family:'Bricolage Grotesque';font-size:18px;font-weight:700}
+        #page-gardeco .gde-phones{display:flex;justify-content:center;gap:22px;position:relative;margin-bottom:-150px}
+        #page-gardeco .gde-phones .gde-phone:nth-child(1){transform:translateY(40px)}
+        #page-gardeco .gde-float{animation:gde-fl 6s ease-in-out infinite}
+        #page-gardeco .gde-float.gde-d{animation-delay:-3s}
+        @keyframes gde-fl{50%{translate:0 -12px}}
+        #page-gardeco /* intro */
+.gde-intro{padding:90px 0 100px}
+        #page-gardeco .gde-intro .gde-grid{display:grid;gap:24px}
+        @media(min-width:900px){#page-gardeco .gde-intro .gde-grid{grid-template-columns:1fr 1fr 1fr}}
+        #page-gardeco .gde-box{border-radius:24px;padding:30px;background:var(--fond)}
+        #page-gardeco .gde-box small{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--menthe)}
+        #page-gardeco .gde-box h3{font-family:'Bricolage Grotesque';font-size:24px;font-weight:700;margin:12px 0 10px;color:var(--forest);line-height:1.2}
+        #page-gardeco .gde-box p{font-size:15px;line-height:1.6;color:#3f5a50}
+        #page-gardeco .gde-box.gde-dark{background:var(--forest)}
+        #page-gardeco .gde-box.gde-dark h3{color:#fff}
+        #page-gardeco .gde-box.gde-dark p{color:#cfeee0}
+        #page-gardeco .gde-box.gde-dark small{color:var(--vif)}
+        #page-gardeco /* sections */
+.gde-s{padding:100px 0}
+        #page-gardeco .gde-h{max-width:620px;margin-bottom:54px}
+        #page-gardeco .gde-h small{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--forest);background:#dff7e8;padding:6px 12px;border-radius:99px}
+        #page-gardeco .gde-h h2{font-family:'Bricolage Grotesque';font-size:clamp(34px,4.4vw,54px);font-weight:700;letter-spacing:-.03em;line-height:1.05;margin:16px 0 12px;color:var(--deep)}
+        #page-gardeco .gde-h p{font-size:17px;line-height:1.6;color:#4b5f57}
+        #page-gardeco .gde-mint{background:var(--fond)}
+        #page-gardeco /* parcours */
+.gde-flow{display:grid;gap:40px;position:relative}
+        @media(min-width:900px){#page-gardeco .gde-flow{grid-template-columns:repeat(3,1fr)}#page-gardeco .gde-flow::before{content:"";position:absolute;top:22px;left:16%;right:16%;border-top:2px dashed #9be0b7}}
+        #page-gardeco .gde-step{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;position:relative}
+        #page-gardeco .gde-dotn{width:44px;height:44px;border-radius:50%;background:var(--forest);color:#fff;font-family:'Bricolage Grotesque';font-weight:700;display:grid;place-items:center;font-size:18px;box-shadow:0 0 0 8px var(--fond)}
+        #page-gardeco .gde-step h3{font-family:'Bricolage Grotesque';font-size:20px;font-weight:700;color:var(--deep)}
+        #page-gardeco .gde-step p{font-size:14px;color:#4b5f57;max-width:250px;line-height:1.5;margin-top:-10px}
+        #page-gardeco /* desktop */
+.gde-browser{border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 40px 80px -40px rgba(0,40,25,.5);border:1px solid #e4efe9}
+        #page-gardeco .gde-browser .gde-bar{height:34px;background:#f4f8f6;display:flex;align-items:center;gap:7px;padding:0 14px;border-bottom:1px solid #e4efe9}
+        #page-gardeco .gde-browser .gde-bar i{width:10px;height:10px;border-radius:50%;background:#cfe0d7}
+        #page-gardeco .gde-browser .gde-bar u{margin-left:14px;flex:1;max-width:340px;height:18px;border-radius:9px;background:#e8f1ec}
+        #page-gardeco .gde-browser .gde-vw{height:600px;overflow:hidden}
+        #page-gardeco .gde-split{display:grid;gap:50px;align-items:center}
+        @media(min-width:960px){#page-gardeco .gde-split{grid-template-columns:.7fr 1.3fr}}
+        #page-gardeco .gde-split .gde-h{margin-bottom:0}
+        #page-gardeco .gde-feat{list-style:none;display:grid;gap:14px;margin-top:26px}
+        #page-gardeco .gde-feat li{display:flex;gap:14px;align-items:flex-start;font-size:15px;color:#3f5a50;line-height:1.5}
+        #page-gardeco .gde-feat li b{flex:none;width:34px;height:34px;border-radius:10px;background:#dff7e8;color:var(--forest);display:grid;place-items:center;font-family:'Bricolage Grotesque';font-size:15px}
+        #page-gardeco /* bento */
+.gde-bento{display:grid;gap:20px}
+        @media(min-width:900px){#page-gardeco .gde-bento{grid-template-columns:1fr 1fr}}
+        #page-gardeco .gde-tile{border-radius:26px;overflow:hidden;position:relative;background:var(--forest)}
+        #page-gardeco .gde-tile .gde-cap{position:absolute;left:20px;bottom:20px;background:#fff;border-radius:14px;padding:12px 16px;max-width:75%}
+        #page-gardeco .gde-tile .gde-cap strong{font-family:'Bricolage Grotesque';color:var(--deep);font-size:17px;display:block}
+        #page-gardeco .gde-tile .gde-cap span{font-size:13px;color:#4b5f57}
+        #page-gardeco /* identité */
+.gde-ident{display:grid;gap:20px}
+        @media(min-width:900px){#page-gardeco .gde-ident{grid-template-columns:1.4fr 1fr}}
+        #page-gardeco .gde-sw{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+        #page-gardeco .gde-sw div{border-radius:20px;height:190px;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;font-size:12px;font-weight:600;border:1px solid #e3eee8}
+        #page-gardeco .gde-sw span{font-family:'Bricolage Grotesque';font-size:16px;font-weight:700;margin-bottom:2px}
+        #page-gardeco .gde-logo{border-radius:20px;background:var(--fond);display:flex;align-items:center;justify-content:center;gap:14px;padding:30px;min-height:190px}
+        #page-gardeco .gde-logo svg{width:54px}
+        #page-gardeco .gde-logo b{font-family:'Bricolage Grotesque';font-size:44px;font-weight:700;color:var(--forest);letter-spacing:-.03em}
+        #page-gardeco .gde-up{opacity:0;translate:0 30px;transition:opacity .7s,translate .7s cubic-bezier(.2,.8,.2,1)}
+        #page-gardeco .gde-up.in{opacity:1;translate:0 0}
+        @media(max-width:700px){#page-gardeco .gde-panel{padding:40px 24px 0;border-radius:24px}#page-gardeco .gde-phone{width:200px}#page-gardeco .gde-phone .gde-view{height:380px}#page-gardeco .gde-phones .gde-phone:nth-child(2){display:none}#page-gardeco .gde-phones{margin-bottom:-90px}#page-gardeco .gde-intro{padding-top:70px}#page-gardeco .gde-browser .gde-vw{height:420px}#page-gardeco .gde-sw{grid-template-columns:repeat(3,1fr)}#page-gardeco .gde-sw div{height:120px}#page-gardeco .gde-s{padding:80px 0}#page-gardeco .gde-flow .gde-phone{width:230px}}
+        @media (prefers-reduced-motion: reduce) { #page-gardeco .gde-float { animation: none; } #page-gardeco .gde-up { opacity: 1; translate: none; transition: none; } }
         /* Cartes développement */
         .dev-card {
             cursor: pointer;
@@ -1494,74 +1589,71 @@
         </div></div>
     </div>
 
-    <div id="page-gardeco" class="page cs-page bh-page relative z-10" style="--c50:#f0fdf4;--c100:#dcfce7;--c200:#bbf7d0;--c500:#16a34a;--c700:#15803d;--c800:#166534">
-        <div class="max-w-6xl mx-auto px-6 pt-10">
-            <div class="flex flex-wrap gap-3 justify-between items-center mb-16">
-                <button onclick="showPage('home')" class="cs-btn"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button>
-                <button onclick="showProject('acm-ui')" class="cs-btn cs-btn-dark">Projet suivant <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-            <div class="bh-head">
-                <span class="cs-tag">Plateforme web · Web & mobile</span>
-                <h1 class="bh-title">Gard'Éco</h1>
-                <p class="bh-subtitle">Trouver un jardin partagé près de chez soi et y réserver une parcelle.</p>
-            </div>
-        </div>
+    <div id="page-gardeco" class="page cs-page relative z-10">
+<header class="gde-hero"><div class="gde-wrap">
+  <div class="gde-panel">
+    <div class="gde-nav2"><button onclick="showPage('home')" class="gde-btn"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button><button onclick="showProject('acm-ui')" class="gde-btn gde-g">Projet suivant <i class="fa-solid fa-arrow-right"></i></button></div>
+    <div>
+      <span class="gde-pill">Plateforme web · Web & mobile</span>
+      <h1 class="gde-bri">Gard'Éco<span>.</span></h1>
+      <p class="gde-sub">Trouver un jardin partagé près de chez soi et y réserver une parcelle.</p>
+      <div class="gde-chips">
+        <div><small>Support</small><strong>Web & mobile</strong></div>
+        <div><small>Outil</small><strong>Figma</strong></div>
+        <div><small>Livrables</small><strong>Maquettes, prototype</strong></div>
+      </div>
+    </div>
+    <div class="gde-phones">
+      <div class="gde-phone gde-float"><div class="gde-scr"><span class="gde-notch"></span><div class="gde-sb">9:41<i><s></s><b></b></i></div><div class="gde-view"><img src="assets/gardeco-mobile-accueil.jpg" alt="Accueil de Gard'Éco sur mobile" loading="lazy"></div></div></div>
+      <div class="gde-phone gde-float gde-d"><div class="gde-scr"><span class="gde-notch"></span><div class="gde-sb">9:41<i><s></s><b></b></i></div><div class="gde-view"><img src="assets/gardeco-mobile-liste.jpg" alt="Liste des jardins sur mobile" loading="lazy"></div></div></div>
+    </div>
+  </div>
+</div></header>
 
-        <div class="bh-wide" data-cs-section>
-            <figure class="bh-shot zoomable img-slot opt" data-label="Gard'Éco" data-caption="Gard'Éco sur desktop et mobile"><img src="assets/gardeco-mockup-m1.jpg" alt="Gard'Éco sur ordinateur et sur téléphone" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure>
-        </div>
+<div class="gde-intro"><div class="gde-wrap gde-grid">
+  <div class="gde-box gde-up"><small>Le constat</small><h3>Des jardins partagés, mais introuvables</h3><p>Il en existe près de chez soi, mais ils sont difficiles à trouver et à réserver.</p></div>
+  <div class="gde-box gde-up"><small>La réponse</small><h3>Toute l'offre au même endroit</h3><p>Gard'Éco réunit les jardins pour les jardiniers novices comme confirmés.</p></div>
+  <div class="gde-box gde-dark gde-up"><small>Le défi</small><h3>Réserver une parcelle en quelques étapes</h3><p>Trois profils à servir : visiteur, membre et admin.</p></div>
+</div></div>
 
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="bh-intro" data-cs-section>
-                <div>
-                    <p class="bh-label">Le projet</p>
-                    <p class="bh-text">Des jardins partagés existent près de chez soi, mais ils sont difficiles à trouver et à réserver. Gard'Éco réunit l'offre en un seul endroit, pour les jardiniers novices comme confirmés.</p>
-                    <p class="bh-question">Comment trouver un jardin et y réserver une parcelle en quelques étapes ?</p>
-                </div>
-                <dl class="bh-meta">
-                    <div><dt>Support</dt><dd>Web & mobile</dd></div>
-                    <div><dt>Outil</dt><dd>Figma</dd></div>
-                    <div><dt>Livrables</dt><dd>Maquettes, prototype</dd></div>
-                    <div><dt>Profils</dt><dd>Visiteur, membre, admin</dd></div>
-                </dl>
-            </div>
-        </div>
+<section class="gde-s gde-mint"><div class="gde-wrap">
+  <div class="gde-h"><small>Parcours clé</small><h2>Réserver une parcelle en trois écrans</h2><p>Sur mobile, chaque étape tient sur un écran, sans détour.</p></div>
+  <div class="gde-flow">
+    <div class="gde-step gde-up"><span class="gde-dotn">1</span><h3>Choisir un jardin</h3><p>Adresse, parcelles et surface, visibles d'un coup d'œil.</p><div class="gde-phone"><div class="gde-scr"><span class="gde-notch"></span><div class="gde-sb">9:41<i><s></s><b></b></i></div><div class="gde-view"><img src="assets/gardeco-mobile-liste.jpg" alt="Liste des jardins sur mobile" loading="lazy"></div></div></div></div>
+    <div class="gde-step gde-up"><span class="gde-dotn">2</span><h3>Indiquer ses parcelles</h3><p>Combien de parcelles, et ce qu'on y cultive.</p><div class="gde-phone"><div class="gde-scr"><span class="gde-notch"></span><div class="gde-sb">9:41<i><s></s><b></b></i></div><div class="gde-view"><img src="assets/gardeco-mobile-reservation.jpg" alt="Écran de réservation" loading="lazy"></div></div></div></div>
+    <div class="gde-step gde-up"><span class="gde-dotn">3</span><h3>Confirmer</h3><p>Un message clair, et la réservation rangée dans le profil.</p><div class="gde-phone"><div class="gde-scr"><span class="gde-notch"></span><div class="gde-sb" style="background:#59CD90">9:41<i><s></s><b></b></i></div><div class="gde-view"><img src="assets/gardeco-mobile-validation.jpg" alt="Confirmation de réservation" loading="lazy"></div></div></div></div>
+  </div>
+</div></section>
 
-        <div class="bh-wide bh-stack">
-            <section class="bh-block" data-cs-section>
-                <div class="bh-caption"><span class="bh-num">01</span><h2>Trouver un jardin</h2><p>Adresse, nombre de parcelles et surface : l'essentiel pour choisir, visible d'un coup d'œil.</p></div>
-                <div class="bh-panel"><figure class="bh-shot bh-framed zoomable img-slot opt" data-label="Liste des jardins" data-caption="Liste des jardins"><img src="assets/gardeco-liste.jpg" alt="Liste des jardins sur desktop" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></div>
-            </section>
+<section class="gde-s"><div class="gde-wrap gde-split">
+  <div class="gde-h"><small>Sur ordinateur</small><h2>Trouver un jardin</h2><p>La liste met en avant ce qui aide à choisir.</p>
+    <ul class="gde-feat"><li><b>1</b>Une photo pour se projeter</li><li><b>2</b>Adresse, parcelles et surface</li><li><b>3</b>Un bouton Réserver sur chaque jardin</li></ul></div>
+  <div class="gde-browser gde-up"><div class="gde-bar"><i></i><i></i><i></i><u></u></div><div class="gde-vw"><img src="assets/gardeco-desktop-liste.jpg" alt="Liste des jardins sur ordinateur" loading="lazy"></div></div>
+</div></section>
 
-            <section class="bh-block" data-cs-section>
-                <div class="bh-caption"><span class="bh-num">02</span><h2>Réserver une parcelle</h2><p>Trois écrans sur mobile : choisir, indiquer ses parcelles et ce qu'on y cultive, confirmer.</p></div>
-                <figure class="bh-shot zoomable img-slot opt" data-label="Réservation" data-caption="Parcours de réservation sur mobile"><img src="assets/gardeco-mockup-m2.jpg" alt="Parcours de réservation sur mobile" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure>
-            </section>
+<section class="gde-s gde-mint"><div class="gde-wrap">
+  <div class="gde-h"><small>Communauté</small><h2>Rejoindre et partager</h2><p>Des formulaires courts pour se connecter, puis rechercher un jardin, proposer le sien ou contacter l'équipe.</p></div>
+  <div class="gde-bento">
+    <div class="gde-tile gde-up"><img src="assets/gardeco-mockup-m3.jpg" alt="Connexion et inscription" loading="lazy"><div class="gde-cap"><strong>Connexion et inscription</strong><span>Deux champs pour entrer, cinq pour s'inscrire.</span></div></div>
+    <div class="gde-tile gde-up"><img src="assets/gardeco-mockup-m4.jpg" alt="Écrans une fois connecté" loading="lazy"><div class="gde-cap"><strong>Une fois connecté</strong><span>Rechercher, partager, contacter.</span></div></div>
+  </div>
+</div></section>
 
-            <section class="bh-block" data-cs-section>
-                <div class="bh-caption"><span class="bh-num">03</span><h2>Rejoindre la communauté</h2><p>Des formulaires courts pour se connecter ou créer un compte.</p></div>
-                <figure class="bh-shot zoomable img-slot opt" data-label="Connexion" data-caption="Connexion et inscription"><img src="assets/gardeco-mockup-m3.jpg" alt="Connexion sur desktop et inscription sur mobile" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure>
-            </section>
-
-            <section class="bh-block" data-cs-section>
-                <div class="bh-caption"><span class="bh-num">04</span><h2>Partager et échanger</h2><p>Une fois connecté : rechercher un jardin, proposer le sien ou contacter l'équipe.</p></div>
-                <figure class="bh-shot zoomable img-slot opt" data-label="Partage" data-caption="Accueil connecté, partage et contact"><img src="assets/gardeco-mockup-m4.jpg" alt="Accueil connecté, partage de jardin et contact sur mobile" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure>
-            </section>
-
-            <section class="bh-block" data-cs-section>
-                <div class="bh-caption"><span class="bh-num">05</span><h2>Identité visuelle</h2><p>Des verts tirés du jardin, un fond menthe clair et des photos de jardiniers.</p></div>
-                <div class="bh-palette">
-                    <div style="background:#03543F;color:#fff"><span>Vert forêt</span><b>#03543F</b></div>
-                    <div style="background:#5ED368;color:#052e16"><span>Vert vif</span><b>#5ED368</b></div>
-                    <div style="background:#59CD90;color:#052e16"><span>Vert menthe</span><b>#59CD90</b></div>
-                    <div style="background:#F2FFF7;color:#052e16"><span>Fond</span><b>#F2FFF7</b></div>
-                    <div style="background:#202020;color:#fff"><span>Texte</span><b>#202020</b></div>
-                </div>
-            </section>
-        </div>
+<section class="gde-s"><div class="gde-wrap">
+  <div class="gde-h"><small>Identité visuelle</small><h2>Des verts tirés du jardin</h2><p>Un fond menthe clair et des photos de jardiniers.</p></div>
+  <div class="gde-ident">
+    <div class="gde-sw">
+      <div class="gde-up" style="background:#03543F;color:#fff;border:0"><span>Forêt</span>#03543F</div>
+      <div class="gde-up" style="background:#5ED368;border:0"><span>Vif</span>#5ED368</div>
+      <div class="gde-up" style="background:#59CD90;border:0"><span>Menthe</span>#59CD90</div>
+      <div class="gde-up" style="background:#F2FFF7"><span>Fond</span>#F2FFF7</div>
+      <div class="gde-up" style="background:#202020;color:#fff;border:0"><span>Texte</span>#202020</div>
+    </div>
+    <div class="gde-logo gde-up"><svg viewBox="0 0 60 60"><path d="M8 6l44 24-44 24 10-24z" fill="#5ED368"/><path d="M8 6l10 24-10 24z" fill="#03543F"/></svg><b>Gard'Éco</b></div>
+  </div>
+</div></section>
 
         <div class="max-w-6xl mx-auto px-6 pb-24">
-
             <button onclick="showProject('acm-ui')" class="bh-next" data-cs-section>
                 <span class="bh-label">Projet suivant</span>
                 <span class="bh-next-title">Ike Oluwa <i class="fa-solid fa-arrow-right"></i></span>
@@ -1969,7 +2061,7 @@
     </script>
     <script>
         (function () {
-            var els = document.querySelectorAll('.ppc-drop, .ppc-up');
+            var els = document.querySelectorAll('.ppc-drop, .ppc-up, .gde-up');
             if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
             var io = new IntersectionObserver(function (es) {
                 es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
