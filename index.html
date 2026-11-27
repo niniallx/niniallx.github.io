@@ -528,6 +528,7 @@
         .bh-shot.img-slot.bh-natural > img { position: static; height: auto; }
         .bh-panel-center { display: flex; justify-content: center; }
         .bh-panel-center .bh-shot { max-width: 560px; width: 100%; }
+        .bh-panel-res .bh-shot { max-width: 820px; }
         .bh-grid-2 { display: grid; gap: 1.5rem; }
         @media (min-width: 900px) { .bh-grid-2 { grid-template-columns: 1.2fr 1fr; } }
         .bh-col { display: flex; flex-direction: column; gap: 1.5rem; }
@@ -1264,8 +1265,8 @@
             </section>
 
             <section class="bh-block" data-cs-section>
-                <div class="bh-caption"><span class="bh-num">03</span><h2>Réserver une mission</h2><p>Tarifs par nombre d'agents, puis choix de la mission et du créneau sur une même page.</p></div>
-                <div class="bh-panel"><figure class="bh-shot zoomable img-slot opt bh-framed" data-label="Réservation" data-caption="Réservation"><img src="assets/kuriosity-reservation.jpg" alt="Page de réservation" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></div>
+                <div class="bh-caption"><span class="bh-num">03</span><h2>Réserver une mission</h2><p>Chaque mission sur une carte : la date, les créneaux disponibles et un bouton pour réserver.</p></div>
+                <div class="bh-panel bh-panel-center bh-panel-res"><figure class="bh-shot zoomable img-slot opt bh-framed bh-natural" data-label="Réservation" data-caption="Réservation"><img src="assets/kuriosity-reservation.jpg" alt="Page de réservation" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></div>
             </section>
 
 
