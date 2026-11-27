@@ -927,6 +927,105 @@
         #page-noor .nr-btn { cursor:pointer; text-decoration:none; border:0; }
         #page-noor .nr-endw { background:#fff; color:#171717; padding-top:1rem; }
         @media (prefers-reduced-motion: reduce) { #page-noor .nr-up { opacity:1; translate:none; transition:none; } #page-noor .nr-flt { animation:none; } }
+        /* RJ10 : outil web */
+        #page-rj10 { --navy:#0f172a; --navy2:#1e293b; --ind:#5b5bf0; --ind2:#7c7cf7; --soft:#eef0ff; --txt:#334155; --mut:#64748b; --line:#e2e8f0; background:#fff; color:var(--txt); overflow-x:clip; }
+        #page-rj10 img { display:block; max-width:100%; }
+        #page-rj10 p { font-size: inherit; }
+        #page-rj10 .rj-wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+        #page-rj10 .rj-hero{background:var(--navy);color:#fff;position:relative;overflow:hidden;padding:36px 0 0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:44px 44px}
+        #page-rj10 .rj-hero::before{content:"";position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(91,91,240,.45),transparent 65%);left:50%;top:-260px;transform:translateX(-50%)}
+        #page-rj10 .rj-nav2{position:relative;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;margin-bottom:60px}
+        #page-rj10 .rj-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:10px;font-family:'Outfit';font-weight:800;font-size:13px;background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.16)}
+        #page-rj10 .rj-btn.rj-i{background:var(--ind);border-color:var(--ind)}
+        #page-rj10 .rj-hin{position:relative;text-align:center}
+        #page-rj10 .rj-badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#c7c9ff;background:rgba(91,91,240,.18);border:1px solid rgba(124,124,247,.4);padding:7px 14px;border-radius:99px}
+        #page-rj10 .rj-badge::before{content:"";width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.2)}
+        #page-rj10 .rj-hero h1{font-family:'Outfit';font-weight:800;font-size:clamp(56px,8vw,104px);letter-spacing:-.035em;line-height:1;margin:22px 0 16px}
+        #page-rj10 .rj-hero .rj-sub{font-size:19px;line-height:1.55;color:#cbd5e1;max-width:560px;margin:0 auto}
+        #page-rj10 .rj-stage{position:relative;max-width:1060px;margin:56px auto 0}
+        #page-rj10 .rj-app{border-radius:14px 14px 0 0;overflow:hidden;box-shadow:0 -20px 80px -20px rgba(91,91,240,.55);border:1px solid rgba(255,255,255,.14);border-bottom:0}
+        #page-rj10 .rj-toast{position:absolute;right:-30px;top:60px;width:300px;background:#fff;color:var(--navy);border-radius:14px;padding:14px 16px;box-shadow:0 24px 50px -16px rgba(0,0,0,.5);display:flex;gap:12px;text-align:left;animation:rj-toast 6s ease-in-out infinite}
+        #page-rj10 .rj-toast i{flex:none;width:36px;height:36px;border-radius:10px;background:var(--soft);display:grid;place-items:center;font-style:normal;font-size:18px}
+        #page-rj10 .rj-toast b{display:block;font-size:14px}
+        #page-rj10 .rj-toast span{font-size:12.5px;color:var(--mut)}
+        #page-rj10 .rj-toast.rj-t2{top:auto;bottom:70px;left:-40px;right:auto;animation-delay:-3s}
+        @keyframes rj-toast{0%,8%{opacity:0;translate:20px 0}15%,70%{opacity:1;translate:0 0}80%,100%{opacity:0;translate:0 -10px}}
+        #page-rj10 .rj-kpis{display:grid;gap:14px;grid-template-columns:repeat(2,1fr);padding:70px 0 20px}
+        @media(min-width:900px){#page-rj10 .rj-kpis{grid-template-columns:repeat(4,1fr)}}
+        #page-rj10 .rj-kpi{border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+        #page-rj10 .rj-kpi small{font-size:12px;color:var(--mut);font-weight:500}
+        #page-rj10 .rj-kpi strong{display:block;font-family:'Outfit';font-weight:800;font-size:34px;color:var(--navy);letter-spacing:-.02em;margin:6px 0 2px}
+        #page-rj10 .rj-kpi span{font-size:13px;color:var(--mut)}
+        #page-rj10 .rj-kpi:nth-child(1) strong{color:var(--ind)}
+        #page-rj10 .rj-s{padding:90px 0}
+        #page-rj10 .rj-cx{display:grid;gap:40px;align-items:start}
+        @media(min-width:960px){#page-rj10 .rj-cx{grid-template-columns:1fr 1fr}}
+        #page-rj10 .rj-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ind)}
+        #page-rj10 .rj-h2{font-family:'Outfit';font-weight:800;font-size:clamp(32px,4vw,48px);letter-spacing:-.03em;line-height:1.08;color:var(--navy);margin:12px 0 14px}
+        #page-rj10 .rj-lead{font-size:17px;line-height:1.65}
+        #page-rj10 .rj-qbox{background:var(--soft);border-radius:20px;padding:30px;border-left:4px solid var(--ind)}
+        #page-rj10 .rj-qbox p{font-family:'Outfit';font-weight:700;font-size:24px;line-height:1.35;color:var(--navy)}
+        #page-rj10 .rj-qbox small{display:block;margin-top:14px;font-size:14px;color:var(--mut)}
+        #page-rj10 .rj-gray{background:#f8fafc}
+        #page-rj10 .rj-flow{display:grid;gap:22px;margin-top:40px;counter-reset:s}
+        @media(min-width:960px){#page-rj10 .rj-flow{grid-template-columns:repeat(2,1fr)}}
+        #page-rj10 .rj-step{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+        #page-rj10 .rj-step header{padding:22px 24px 16px;display:flex;gap:14px;align-items:flex-start}
+        #page-rj10 .rj-step .rj-n{flex:none;width:34px;height:34px;border-radius:10px;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:'Outfit';font-weight:800;font-size:15px}
+        #page-rj10 .rj-step h3{font-family:'Outfit';font-weight:800;font-size:20px;color:var(--navy);letter-spacing:-.01em}
+        #page-rj10 .rj-step p{font-size:14.5px;line-height:1.55;color:var(--mut);margin-top:4px}
+        #page-rj10 .rj-step .rj-pic{margin:0 24px 24px;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff;margin-top:auto}
+        #page-rj10 .rj-step .rj-pic.rj-c{max-width:340px}
+        #page-rj10 .rj-ex{display:grid;gap:0;margin-top:40px;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 40px 80px -40px rgba(15,23,42,.45)}
+        @media(min-width:960px){#page-rj10 .rj-ex{grid-template-columns:220px 1fr}}
+        #page-rj10 .rj-side{background:var(--navy);padding:20px 14px;display:flex;flex-direction:column;gap:6px}
+        #page-rj10 .rj-side .rj-logo{display:flex;gap:10px;align-items:center;color:#fff;font-family:'Outfit';font-weight:800;font-size:16px;padding:4px 8px 18px}
+        #page-rj10 .rj-side .rj-logo i{width:30px;height:30px;border-radius:9px;background:var(--ind);display:block}
+        #page-rj10 .rj-side button{all:unset;cursor:pointer;color:#94a3b8;font-size:14px;padding:11px 12px;border-radius:10px;transition:all .2s}
+        #page-rj10 .rj-side button:hover{color:#fff}
+        #page-rj10 .rj-side button.rj-on{background:rgba(91,91,240,.22);color:#fff}
+        #page-rj10 .rj-side p{color:#64748b;font-size:12.5px;line-height:1.5;padding:14px 12px 0;margin-top:auto}
+        #page-rj10 .rj-view{position:relative;background:#f1f5f9;aspect-ratio:1400/764}
+        #page-rj10 .rj-view img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left top;opacity:0;transition:opacity .45s}
+        #page-rj10 .rj-view img.rj-on{opacity:1}
+        #page-rj10 .rj-cbento{display:grid;gap:16px;margin-top:36px}
+        @media(min-width:960px){#page-rj10 .rj-cbento{grid-template-columns:.85fr 1.15fr}}
+        #page-rj10 .rj-ctile{border:1px solid var(--line);border-radius:20px;padding:14px;background:#fff;display:flex;flex-direction:column}
+        #page-rj10 .rj-ctile img{border-radius:12px}
+        #page-rj10 .rj-ctile span{font-size:13px;color:var(--mut);padding:12px 6px 2px}
+        #page-rj10 .rj-det{display:grid;gap:22px;margin-top:36px}
+        @media(min-width:960px){#page-rj10 .rj-det{grid-template-columns:1fr 1fr}}
+        #page-rj10 .rj-dcard{border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:18px}
+        #page-rj10 .rj-dcard h3{font-family:'Outfit';font-weight:800;font-size:22px;color:var(--navy)}
+        #page-rj10 .rj-dcard p{font-size:15px;line-height:1.55;color:var(--mut);margin-top:-10px}
+        #page-rj10 .rj-dcard .rj-im{border-radius:14px;overflow:hidden;box-shadow:0 24px 50px -24px rgba(15,23,42,.35);margin-top:auto;background:#fff}
+        #page-rj10 .rj-dcard.rj-a{background:var(--soft)}
+        #page-rj10 .rj-dcard.rj-b{background:#ecfdf5}
+        #page-rj10 .rj-dcard.rj-a .rj-im{max-width:420px;align-self:center}
+        #page-rj10 .rj-idg{display:grid;gap:16px;margin-top:36px}
+        @media(min-width:960px){#page-rj10 .rj-idg{grid-template-columns:1fr 1fr}}
+        #page-rj10 .rj-idc{border:1px solid var(--line);border-radius:20px;padding:26px}
+        #page-rj10 .rj-idc small{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+        #page-rj10 .rj-pal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+        #page-rj10 .rj-pal div{height:120px;border-radius:14px;padding:12px;display:flex;align-items:flex-end;font-size:13px;font-weight:600}
+        #page-rj10 .rj-bdg{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+        #page-rj10 .rj-bdg span{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;padding:7px 12px;border-radius:99px}
+        #page-rj10 .rj-bdg .rj-dot::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+        #page-rj10 .rj-bil{display:grid;gap:16px;margin-top:36px}
+        @media(min-width:900px){#page-rj10 .rj-bil{grid-template-columns:1fr 1fr}}
+        #page-rj10 .rj-bc{border-radius:20px;padding:28px;border:1px solid var(--line)}
+        #page-rj10 .rj-bc.rj-d{background:var(--navy);border:0}
+        #page-rj10 .rj-bc small{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ind)}
+        #page-rj10 .rj-bc.rj-d small{color:#a5a6ff}
+        #page-rj10 .rj-bc p{font-family:'Outfit';font-weight:700;font-size:21px;line-height:1.4;color:var(--navy);margin-top:10px}
+        #page-rj10 .rj-bc.rj-d p{color:#fff}
+        #page-rj10 .rj-up{opacity:0;translate:0 26px;transition:opacity .7s,translate .7s cubic-bezier(.2,.8,.2,1)}
+        #page-rj10 .rj-up.in{opacity:1;translate:0 0}
+        @media(max-width:959px){#page-rj10 .rj-side{flex-direction:row;flex-wrap:wrap;padding:12px}#page-rj10 .rj-side .rj-logo, #page-rj10 .rj-side p{display:none}#page-rj10 .rj-side button{padding:8px 12px}}
+        @media(max-width:700px){#page-rj10 .rj-toast{width:220px;right:-6px;top:20px;padding:10px 12px}#page-rj10 .rj-toast.rj-t2{display:none}#page-rj10 .rj-s{padding:70px 0}#page-rj10 .rj-qbox p{font-size:20px}}
+        #page-rj10 .rj-btn { cursor:pointer; }
+        #page-rj10 .rj-endw { background:#fff; color:#171717; padding-top:1rem; }
+        @media (prefers-reduced-motion: reduce) { #page-rj10 .rj-up { opacity:1; translate:none; transition:none; } #page-rj10 .rj-toast { animation:none; opacity:1; } }
         /* Cartes développement */
         .dev-card {
             cursor: pointer;
@@ -1568,42 +1667,103 @@
 
     </div>
     
-    <div id="page-rj10" class="page cs-page relative z-10" style="--c50:#ecfdf5;--c100:#d1fae5;--c200:#a7f3d0;--c500:#10b981;--c700:#047857;--c800:#065f46">
-        <div class="max-w-6xl mx-auto px-6 pt-10 pb-24">
-            <div class="flex flex-wrap gap-3 justify-between items-center mb-14">
-                <button onclick="showPage('home')" class="cs-btn"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button>
-                <div class="flex flex-wrap gap-3"><button onclick="showProject('planpoitrines-maquette')" class="cs-btn cs-btn-dark">Projet suivant <i class="fa-solid fa-arrow-right"></i></button></div>
-            </div>
-
-            <span class="cs-tag">Application web</span>
-            <h1 class="cs-h1">RJ10 Rappel</h1>
-            <p class="cs-subtitle">Des rappels automatiques pour le renouvellement des certifications professionnelles.</p>
-            <figure class="img-slot opt zoomable aspect-[16/8] cs-cover" data-label="Visuel de couverture" data-caption="RJ10 Rappel"><img src="assets/rj10-dashboard.png" alt="RJ10 Rappel" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure>
-            <div class="cs-meta"><div><p class="cs-meta-k">Rôle</p><p class="cs-meta-v">Conception &amp; développement</p></div><div><p class="cs-meta-k">Durée</p><p class="cs-meta-v">9 semaines · 2026</p></div><div><p class="cs-meta-k">Outils</p><p class="cs-meta-v">Symfony 7, Vue.js 3</p></div><div><p class="cs-meta-k">Structure</p><p class="cs-meta-v">RJ10 Formation</p></div></div>
-
-            <div class="flex flex-wrap gap-12 lg:gap-16 items-start">
-                <nav aria-label="Sommaire" class="cs-nav">
-                    <p class="cs-meta-k mb-4">Sommaire</p>
-                    <a href="#rj10-contexte" data-cs-target="rj10-contexte" onclick="csScroll(event, 'rj10-contexte')"><span class="cs-nav-num">01</span> Contexte</a><a href="#rj10-probleme" data-cs-target="rj10-probleme" onclick="csScroll(event, 'rj10-probleme')"><span class="cs-nav-num">02</span> Problème</a><a href="#rj10-processus" data-cs-target="rj10-processus" onclick="csScroll(event, 'rj10-processus')"><span class="cs-nav-num">03</span> Processus</a><a href="#rj10-wireframes" data-cs-target="rj10-wireframes" onclick="csScroll(event, 'rj10-wireframes')"><span class="cs-nav-num">04</span> Wireframes</a><a href="#rj10-interface" data-cs-target="rj10-interface" onclick="csScroll(event, 'rj10-interface')"><span class="cs-nav-num">05</span> Interface</a><a href="#rj10-mockups" data-cs-target="rj10-mockups" onclick="csScroll(event, 'rj10-mockups')"><span class="cs-nav-num">06</span> Mockups</a><a href="#rj10-details" data-cs-target="rj10-details" onclick="csScroll(event, 'rj10-details')"><span class="cs-nav-num">07</span> Détails</a><a href="#rj10-bilan" data-cs-target="rj10-bilan" onclick="csScroll(event, 'rj10-bilan')"><span class="cs-nav-num">08</span> Bilan</a>
-                </nav>
-                <div class="cs-body">
-<section id="rj10-contexte" data-cs-section class="cs-section"><p class="cs-num">01</p><h2 class="cs-h2">Contexte</h2><p class="cs-lead">Un centre de formation aux métiers de la sécurité. Son logiciel de gestion ne prévenait pas les anciens stagiaires de l&#x27;expiration de leur titre.</p><div class="cs-chips"><span class="cs-chip">APS, SSIAP, SST</span><span class="cs-chip">Travail en autonomie</span><span class="cs-chip">Fidélisation</span></div></section>
-<section id="rj10-probleme" data-cs-section class="cs-section cs-problem-box"><p class="cs-num-line"><span class="cs-num">02</span> · Problème</p><p class="cs-problem">Comment relancer automatiquement les anciens stagiaires avant l&#x27;expiration de leur certification ?</p></section>
-<section id="rj10-processus" data-cs-section data-cs-media class="cs-section"><p class="cs-num">03</p><h2 class="cs-h2">Processus</h2><div class="cs-grid-2"><figure class="cs-fig"><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Arborescence" data-caption="Arborescence"><img src="assets/rj10-arborescence.png" alt="Arborescence" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figcaption class="cs-caption"><strong>Arborescence</strong><span>Un accès administrateur organisé autour des stagiaires et des formations.</span></figcaption></figure><figure class="cs-fig"><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Données" data-caption="Données"><img src="assets/rj10-db.png" alt="Données" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figcaption class="cs-caption"><strong>Données</strong><span>Une durée de validité propre à chaque formation : 5, 3 ou 2 ans.</span></figcaption></figure></div></section>
-<section id="rj10-wireframes" data-cs-section data-cs-media class="cs-section"><p class="cs-num">04</p><h2 class="cs-h2">Wireframes</h2><p class="cs-lead">Chaque page, écran par écran.</p><div class="cs-grid-3"><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Wireframe 1" data-caption="Wireframe 1"><img src="assets/rj10-wireframe.png" alt="Wireframe 1" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Wireframe 2" data-caption="Wireframe 2"><img src="assets/rj10-wireframe-2.png" alt="Wireframe 2" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Wireframe mobile" data-caption="Wireframe mobile"><img src="assets/rj10-wireframe-mobile.png" alt="Wireframe mobile" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></div></section>
-<section id="rj10-interface" data-cs-section data-cs-media class="cs-section"><p class="cs-num">05</p><h2 class="cs-h2">Interface</h2><p class="cs-lead">Les titres proches de l&#x27;expiration ressortent en un coup d&#x27;œil.</p><figure class="img-slot opt zoomable aspect-[16/10]" data-label="Interface" data-caption="Interface"><img src="assets/rj10-stagiaires.png" alt="Interface" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><div class="cs-grid-3 mt-4"><figure class="cs-fig"><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Formations" data-caption="Formations"><img src="assets/rj10-formations.png" alt="Formations" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figcaption class="cs-caption"><span>Formations</span></figcaption></figure><figure class="cs-fig"><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Inscription" data-caption="Inscription"><img src="assets/rj10-inscriptionForm.png" alt="Inscription" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figcaption class="cs-caption"><span>Inscription</span></figcaption></figure></div></section>
-<section id="rj10-mockups" data-cs-section data-cs-media class="cs-section"><p class="cs-num">06</p><h2 class="cs-h2">Mockups</h2><p class="cs-lead">Le projet en situation, sur ordinateur et sur mobile.</p><figure class="img-slot opt zoomable aspect-[16/10] mb-4" data-label="Mockup desktop" data-caption="Mockup desktop"><img src="assets/rj10-mockup-desktop.png" alt="Mockup desktop" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><div class="cs-grid-3"><figure class="img-slot opt zoomable aspect-[9/16] cs-phone" data-label="Mockup mobile 1" data-caption="Mockup mobile 1"><img src="assets/rj10-mockup-mobile-1.png" alt="Mockup mobile 1" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figure class="img-slot opt zoomable aspect-[9/16] cs-phone" data-label="Mockup mobile 2" data-caption="Mockup mobile 2"><img src="assets/rj10-mockup-mobile-2.png" alt="Mockup mobile 2" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figure class="img-slot opt zoomable aspect-[9/16] cs-phone" data-label="Mockup mobile 3" data-caption="Mockup mobile 3"><img src="assets/rj10-mockup-mobile-3.png" alt="Mockup mobile 3" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure></div></section>
-<section id="rj10-details" data-cs-section data-cs-media class="cs-section"><p class="cs-num">07</p><h2 class="cs-h2">Détails</h2><p class="cs-lead">Zoom sur les choix d'interface.</p><div class="cs-grid-2"><figure class="cs-fig"><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Email de relance" data-caption="Email de relance"><img src="assets/rj10-template-email.png" alt="Email de relance" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figcaption class="cs-caption"><strong>Email de relance</strong><span>Un message adapté à chaque formation.</span></figcaption></figure><figure class="cs-fig"><figure class="img-slot opt zoomable aspect-[4/3]" data-label="Rappels" data-caption="Rappels"><img src="assets/rj10-rappel.png" alt="Rappels" onload="slotLoaded(this)" onerror="slotMissing(this)"></figure><figcaption class="cs-caption"><strong>Rappels</strong><span>La planification des relances.</span></figcaption></figure></div></section>
-<section id="rj10-bilan" data-cs-section class="cs-section"><p class="cs-num">08</p><h2 class="cs-h2">Bilan</h2><div class="cs-grid-2"><div class="cs-card"><p class="cs-card-label">Difficulté</p><p>Travailler seule, sans interlocuteur technique.</p></div><div class="cs-card"><p class="cs-card-label">Ce que j&#x27;en retiens</p><p>Consacrer plus de temps à l&#x27;analyse du métier avant d&#x27;écrire du code.</p></div></div></section>
-                </div>
-            </div>
-
-            <div class="flex justify-center pt-16">
-                <button onclick="showProject('planpoitrines-maquette')" class="cs-btn cs-btn-dark cs-btn-lg">Projet suivant : Plan Poitrines <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-        </div>
+    <div id="page-rj10" class="page cs-page relative z-10">
+<header class="rj-hero"><div class="rj-wrap">
+  <div class="rj-nav2"><button onclick="showPage('home')" class="rj-btn"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button><button onclick="showProject('planpoitrines-maquette')" class="rj-btn rj-i">Projet suivant <i class="fa-solid fa-arrow-right"></i></button></div>
+  <div class="rj-hin">
+    <span class="rj-badge">Application web · Centre de formation</span>
+    <h1>RJ10 Rappels</h1>
+    <p class="rj-sub">Un outil qui prévient les anciens stagiaires avant l'expiration de leur certification.</p>
+    <div class="rj-stage rj-up">
+      <div class="rj-app"><img src="assets/rj10-s-dashboard.jpg" alt="Tableau de bord RJ10 Rappels" loading="lazy"></div>
+      <div class="rj-toast"><i>✉️</i><div><b>Rappel envoyé</b><span>SSIAP 1 · expire dans 3 mois</span></div></div>
+      <div class="rj-toast rj-t2"><i>⏰</i><div><b>2 titres en alerte</b><span>Dans les 90 prochains jours</span></div></div>
     </div>
+  </div>
+</div></header>
 
+<div class="rj-wrap rj-kpis">
+  <div class="rj-kpi rj-up"><small>Durée</small><strong>9 sem.</strong><span>De l'analyse à la mise en ligne</span></div>
+  <div class="rj-kpi rj-up"><small>Formations suivies</small><strong>5</strong><span>APS, SSIAP 1 et 2, SST, Habilitation</span></div>
+  <div class="rj-kpi rj-up"><small>Validité</small><strong>2 à 5 ans</strong><span>Selon la certification</span></div>
+  <div class="rj-kpi rj-up"><small>Rappel</small><strong>3 mois</strong><span>Avant l'expiration</span></div>
+</div>
+
+<section class="rj-s"><div class="rj-wrap rj-cx">
+  <div><span class="rj-eyebrow">Le contexte</span><h2 class="rj-h2">Des titres qui expirent sans prévenir</h2><p class="rj-lead">RJ10 Formation forme aux métiers de la sécurité. Ses stagiaires doivent renouveler leur certification tous les 2 à 5 ans, mais rien ne les prévenait à temps.</p></div>
+  <div class="rj-qbox rj-up"><p>Comment relancer automatiquement les stagiaires avant l'expiration de leur titre ?</p><small>Rôle : conception et développement · seule sur le projet</small></div>
+</div></section>
+
+<section class="rj-s"><div class="rj-wrap">
+  <span class="rj-eyebrow">Conception</span><h2 class="rj-h2">Du papier à l'écran</h2><p class="rj-lead">Une arborescence simple autour du tableau de bord, puis des wireframes dessinés à la main, où le code couleur des formations est déjà noté.</p>
+  <div class="rj-cbento">
+    <div class="rj-ctile rj-up"><img src="assets/rj10-w-arbo.jpg" alt="Arborescence de l'outil" loading="lazy"><span>Arborescence de l'outil</span></div>
+    <div class="rj-ctile rj-up"><img src="assets/rj10-w-wire.jpg" alt="Wireframes dessinés à la main" loading="lazy"><span>Wireframes : tableau de bord, stagiaires, formations, inscriptions</span></div>
+  </div>
+</div></section>
+
+<section class="rj-s rj-gray"><div class="rj-wrap">
+  <span class="rj-eyebrow">Le parcours d'un rappel</span><h2 class="rj-h2">De la formation à l'e-mail, sans oubli</h2>
+  <div class="rj-flow">
+    <div class="rj-step rj-up"><header><span class="rj-n">1</span><div><h3>Chaque formation a ses règles</h3><p>Durée de validité et délai de rappel, réglables sans toucher au code.</p></div></header><div class="rj-pic rj-c"><img src="assets/rj10-c-formation.jpg" alt="Carte formation SST" loading="lazy"></div></div>
+    <div class="rj-step rj-up"><header><span class="rj-n">2</span><div><h3>Les titres en alerte ressortent</h3><p>Les certifications proches de l'expiration s'affichent en rouge sur le tableau de bord.</p></div></header><div class="rj-pic"><img src="assets/rj10-c-alertes.jpg" alt="Titres en alerte" loading="lazy"></div></div>
+    <div class="rj-step rj-up"><header><span class="rj-n">3</span><div><h3>Un e-mail personnalisé part tout seul</h3><p>Un modèle modifiable, rempli avec le nom et la formation du stagiaire.</p></div></header><div class="rj-pic"><img src="assets/rj10-c-email.jpg" alt="Modèle d'e-mail de rappel" loading="lazy"></div></div>
+    <div class="rj-step rj-up"><header><span class="rj-n">4</span><div><h3>Tout est tracé</h3><p>L'historique des rappels, avec la possibilité de relire chaque message.</p></div></header><div class="rj-pic"><img src="assets/rj10-c-rappels.jpg" alt="Historique des rappels" loading="lazy"></div></div>
+  </div>
+</div></section>
+
+<section class="rj-s"><div class="rj-wrap">
+  <span class="rj-eyebrow">Les écrans</span><h2 class="rj-h2">Explore l'interface</h2><p class="rj-lead">Clique dans le menu, comme dans l'application.</p>
+  <div class="rj-ex rj-up">
+    <div class="rj-side" id="rj-side">
+      <div class="rj-logo"><i></i>RJ10 Rappels</div>
+      <button class="rj-on" data-i="0">Tableau de bord</button>
+      <button type="button" data-i="1">Stagiaires</button>
+      <button type="button" data-i="2">Formations</button>
+      <button type="button" data-i="3">Rappels</button>
+      <button type="button" data-i="4">Paramètres</button>
+      <p id="rj-sidecap">Les chiffres clés et les titres en alerte, dès la connexion.</p>
+    </div>
+    <div class="rj-view" id="rj-view"><img class="rj-on" src="assets/rj10-x-dashboard.jpg" alt="Tableau de bord" loading="lazy"><img src="assets/rj10-x-stagiaires.jpg" alt="Liste des stagiaires" loading="lazy"><img src="assets/rj10-x-formations.jpg" alt="Formations" loading="lazy"><img src="assets/rj10-x-rappel.jpg" alt="Rappels" loading="lazy"><img src="assets/rj10-x-parametre.jpg" alt="Paramètres de l'e-mail" loading="lazy"></div>
+  </div>
+</div></section>
+
+<section class="rj-s"><div class="rj-wrap">
+  <span class="rj-eyebrow">Zoom</span><h2 class="rj-h2">Les détails qui comptent</h2>
+  <div class="rj-det">
+    <div class="rj-dcard rj-b rj-up"><h3>La date se calcule toute seule</h3><p>À l'inscription, l'outil déduit l'expiration et affiche les jours restants.</p><div class="rj-im"><img src="assets/rj10-w-carte.jpg" alt="Calcul de la date d'expiration" loading="lazy"></div></div>
+    <div class="rj-dcard rj-a rj-up"><h3>Ce que reçoit le stagiaire</h3><p>Chaque rappel peut être relu : destinataire, formation et message.</p><div class="rj-im"><img src="assets/rj10-w-msg.jpg" alt="Message du rappel" loading="lazy"></div></div>
+  </div>
+</div></section>
+
+<section class="rj-s rj-gray"><div class="rj-wrap">
+  <span class="rj-eyebrow">Identité</span><h2 class="rj-h2">Un code couleur lisible</h2><p class="rj-lead">Une base sobre, et des couleurs qui portent le sens : chaque formation et chaque statut se reconnaît d'un coup d'œil.</p>
+  <div class="rj-idg">
+    <div class="rj-idc rj-up"><small>Palette</small><div class="rj-pal">
+      <div style="background:#0f172a;color:#fff">Bleu nuit</div><div style="background:#5b5bf0;color:#fff">Indigo</div><div style="background:#f1f5f9">Gris clair</div><div style="background:#fff;border:1px solid #e2e8f0">Blanc</div>
+    </div></div>
+    <div class="rj-idc rj-up"><small>Statuts et formations</small>
+      <div class="rj-bdg"><span style="background:#fee2e2;color:#dc2626">Expiré</span><span style="background:#ffedd5;color:#ea580c">En alerte</span><span style="background:#dcfce7;color:#16a34a">Envoyé</span><span style="background:#f1f5f9;color:#64748b">Non contacté</span></div>
+      <div class="rj-bdg"><span class="rj-dot" style="background:#f0fdf4;color:#16a34a">SST</span><span class="rj-dot" style="background:#fff7ed;color:#f59e0b">SSIAP 1</span><span class="rj-dot" style="background:#fef2f2;color:#dc2626">SSIAP 2</span><span class="rj-dot" style="background:#eff6ff;color:#3b82f6">APS</span><span class="rj-dot" style="background:#f5f3ff;color:#8b5cf6">Habilitation électrique</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="rj-s"><div class="rj-wrap">
+  <span class="rj-eyebrow">Bilan</span><h2 class="rj-h2">Ce que j'en retiens</h2>
+  <div class="rj-bil">
+    <div class="rj-bc rj-up"><small>Difficulté</small><p>Mener le projet seule, sans interlocuteur technique, en traduisant les besoins du centre en écrans simples.</p></div>
+    <div class="rj-bc rj-d rj-up"><small>Avec du recul</small><p>Passer plus de temps à comprendre le métier avant de concevoir.</p></div>
+  </div>
+</div></section>
+
+        <div class="rj-endw"><div class="max-w-6xl mx-auto px-6 pb-24">
+            <button onclick="showProject('planpoitrines-maquette')" class="bh-next" data-cs-section>
+                <span class="bh-label">Projet suivant</span>
+                <span class="bh-next-title">Plan Poitrines <i class="fa-solid fa-arrow-right"></i></span>
+            </button>
+        </div></div>
+    </div>
     <div id="page-kuriosity" class="page cs-page relative z-10">
 <header class="kq-hero kq-grain"><div class="kq-wrap">
   <div class="kq-nav2"><button onclick="showPage('home')" class="kq-btn"><i class="fa-solid fa-arrow-left"></i> Retour aux projets</button><button onclick="showProject('noor')" class="kq-btn kq-o">Projet suivant <i class="fa-solid fa-arrow-right"></i></button></div>
@@ -2296,7 +2456,7 @@
     </script>
     <script>
         (function () {
-            var els = document.querySelectorAll('.ppc-drop, .ppc-up, .gde-up, .kq-up, .kq-slam, .nr-up');
+            var els = document.querySelectorAll('.ppc-drop, .ppc-up, .gde-up, .kq-up, .kq-slam, .nr-up, .rj-up');
             if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
             var io = new IntersectionObserver(function (es) {
                 es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
@@ -2334,6 +2494,20 @@
                 l.style.backgroundImage = 'url(' + im.src + ')';
                 l.style.backgroundSize = (ir.width * f) + 'px ' + (ir.height * f) + 'px';
                 l.style.backgroundPosition = (-(e.clientX - ir.left) * f + 94) + 'px ' + (-(e.clientY - ir.top) * f + 94) + 'px';
+            });
+        })();
+    </script>
+    <script>
+        (function () {
+            var caps = ["Les chiffres clés et les titres en alerte, dès la connexion.", "Tous les stagiaires, filtrables par statut : actifs, en alerte ou expirés.", "Une carte par formation, avec sa couleur, sa durée et son délai de rappel.", "L'historique des rappels envoyés, filtrable par formation et par statut.", "Le modèle d'e-mail, personnalisable sans toucher au code."];
+            var btns = document.querySelectorAll('#rj-side button');
+            btns.forEach(function (b) {
+                b.addEventListener('click', function () {
+                    var i = +b.getAttribute('data-i');
+                    btns.forEach(function (x) { x.classList.toggle('on', x === b); });
+                    document.querySelectorAll('#rj-view img').forEach(function (im, k) { im.classList.toggle('on', k === i); });
+                    document.getElementById('rj-sidecap').textContent = caps[i];
+                });
             });
         })();
     </script>
