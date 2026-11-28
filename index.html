@@ -1001,6 +1001,16 @@
         #page-rj10 .rj-btn { cursor:pointer; }
         #page-rj10 .rj-endw { background:#fff; color:#171717; padding-top:1rem; }
         @media (prefers-reduced-motion: reduce) { #page-rj10 .rj-up { opacity:1; translate:none; transition:none; } #page-rj10 .rj-toast { animation:none; } }
+        #page-rj10 .rj-flat{border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 30px 60px -36px rgba(15,23,42,.35)}
+        #page-rj10 .rj-fbar{height:28px;background:#f1f5f9;display:flex;align-items:center;gap:6px;padding:0 12px;border-bottom:1px solid var(--line)}
+        #page-rj10 .rj-fbar i{width:9px;height:9px;border-radius:50%;background:#cbd5e1}
+        #page-rj10 .rj-fimg{position:relative;overflow:hidden}
+        #page-rj10 .rj-fimg img{width:100%;transform:scale(1.04);transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}
+        #page-rj10 .rj-spot{position:absolute;border-radius:10px;border:2px solid var(--ind);box-shadow:0 0 0 9999px rgba(15,23,42,0);opacity:0;transition:opacity .6s .9s,box-shadow .8s .9s}
+        #page-rj10 .rj-row.in .rj-fimg img{transform:scale(1)}
+        #page-rj10 .rj-row.in .rj-spot{opacity:1;box-shadow:0 0 0 9999px rgba(15,23,42,.38);animation:rj-pulse 2.6s 1.8s ease-in-out infinite}
+        @keyframes rj-pulse{50%{border-color:rgba(91,91,240,.35)}}
+        @media (prefers-reduced-motion: reduce){#page-rj10 .rj-fimg img{transform:none;transition:none}#page-rj10 .rj-spot{transition:none;animation:none}}
         /* Cartes développement */
         .dev-card {
             cursor: pointer;
@@ -1696,18 +1706,16 @@
 <section class="rj-s"><div class="rj-wrap">
   <span class="rj-eyebrow">Le parcours d'un rappel</span><h2 class="rj-h2">De la formation à l'e-mail, sans oubli</h2>
   <div class="rj-zz">
-    <div class="rj-row rj-up"><div class="rj-tx"><span class="rj-n">01</span><h3>Chaque formation a ses règles</h3><p>Durée de validité et délai de rappel, réglables sans toucher au code. Une couleur par formation.</p></div><div class="rj-pic"><img src="assets/rj10-mk-m1.jpg" alt="Cartes des formations" loading="lazy"></div></div>
-    <div class="rj-row rj-r rj-up"><div class="rj-tx"><span class="rj-n">02</span><h3>Les titres en alerte ressortent</h3><p>Les certifications proches de l'expiration s'affichent dès la connexion.</p></div><div class="rj-pic"><img src="assets/rj10-mk-m2.jpg" alt="Titres en alerte sur le tableau de bord" loading="lazy"></div></div>
-    <div class="rj-row rj-up"><div class="rj-tx"><span class="rj-n">03</span><h3>Un e-mail personnalisé part tout seul</h3><p>Un modèle modifiable, rempli avec le nom et la formation du stagiaire.</p></div><div class="rj-pic"><img src="assets/rj10-mk-m3.jpg" alt="Modèle d'e-mail de rappel" loading="lazy"></div></div>
-    <div class="rj-row rj-r rj-up"><div class="rj-tx"><span class="rj-n">04</span><h3>Tout est tracé</h3><p>L'historique des rappels, filtrable par formation et par statut.</p></div><div class="rj-pic"><img src="assets/rj10-mk-m4.jpg" alt="Historique des rappels" loading="lazy"></div></div>
+    <div class="rj-row rj-up"><div class="rj-tx"><span class="rj-n">01</span><h3>Chaque formation a ses règles</h3><p>Durée de validité et délai de rappel, réglables sans toucher au code. Une couleur par formation.</p></div><div class="rj-pic rj-flat"><div class="rj-fbar"><i></i><i></i><i></i></div><div class="rj-fimg"><img src="assets/rj10-flat-formations.jpg" alt="Écran Formations" loading="lazy"><span class="rj-spot" style="left:20.3%;top:21.5%;width:74.3%;height:71.6%"></span></div></div></div>
+    <div class="rj-row rj-r rj-up"><div class="rj-tx"><span class="rj-n">02</span><h3>Les titres en alerte ressortent</h3><p>Les certifications proches de l'expiration s'affichent dès la connexion.</p></div><div class="rj-pic rj-flat"><div class="rj-fbar"><i></i><i></i><i></i></div><div class="rj-fimg"><img src="assets/rj10-flat-dashboard.jpg" alt="Écran Tableau de bord" loading="lazy"><span class="rj-spot" style="left:21.2%;top:54.2%;width:77.2%;height:45.4%"></span></div></div></div>
+    <div class="rj-row rj-up"><div class="rj-tx"><span class="rj-n">03</span><h3>Un e-mail personnalisé part tout seul</h3><p>Un modèle modifiable, rempli avec le nom et la formation du stagiaire.</p></div><div class="rj-pic rj-flat"><div class="rj-fbar"><i></i><i></i><i></i></div><div class="rj-fimg"><img src="assets/rj10-flat-parametre.jpg" alt="Écran Paramètres" loading="lazy"><span class="rj-spot" style="left:22.1%;top:13.9%;width:76.4%;height:85.2%"></span></div></div></div>
+    <div class="rj-row rj-r rj-up"><div class="rj-tx"><span class="rj-n">04</span><h3>Tout est tracé</h3><p>L'historique des rappels, filtrable par formation et par statut.</p></div><div class="rj-pic rj-flat"><div class="rj-fbar"><i></i><i></i><i></i></div><div class="rj-fimg"><img src="assets/rj10-flat-rappels.jpg" alt="Écran Rappels" loading="lazy"><span class="rj-spot" style="left:21.2%;top:51.9%;width:76.8%;height:47.7%"></span></div></div></div>
   </div>
 </div></section>
 
 <section class="rj-iso"><div class="rj-wrap">
   <span class="rj-eyebrow" style="color:#a5b4fc">Les écrans</span><h2 class="rj-h2">Une interface, quatre espaces</h2><p class="rj-lead">Tableau de bord, formations, rappels et paramètres, avec la même navigation.</p>
 </div><img class="rj-up" src="assets/rj10-mk-m5.jpg" alt="Les quatre écrans de RJ10 Rappels" loading="lazy"></section>
-
-<section class="rj-full" style="background:#0e0f13"><img src="assets/rj10-pv-scene.jpg" alt="Écran Rappels sur un ordinateur" loading="lazy"><span class="rj-ftag rj-up" style="left:6%;top:30%">Prévenir avant l'expiration</span><span class="rj-ftag rj-up" style="right:6%;top:58%">Ne plus relancer à la main</span></section>
 
 <section class="rj-s rj-gray"><div class="rj-wrap">
   <span class="rj-eyebrow">Identité</span><h2 class="rj-h2">Un code couleur lisible</h2>
